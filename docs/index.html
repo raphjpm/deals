@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#003C6B">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="SoCal Deals">
+<title>SoCal Deal Tracker</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌮</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F6FA;--surface:#FFF;--ink:#16202E;--muted:#5B6878;--line:#D9E0E9;--blue:#005A9C;--red:#D6363B;--grass:#1F7A4A;--grass-soft:#E3F3EA;--amber:#9A6200;--board:#003C6B}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1722;--surface:#172231;--ink:#E7EDF4;--muted:#9AA8B8;--line:#2A3748;--blue:#5AA7E6;--red:#F0676B;--grass:#4CC287;--grass-soft:#173828;--amber:#E0A84A;--board:#0A2F52}}
+:root[data-theme="dark"]{--bg:#0F1722;--surface:#172231;--ink:#E7EDF4;--muted:#9AA8B8;--line:#2A3748;--blue:#5AA7E6;--red:#F0676B;--grass:#4CC287;--grass-soft:#173828;--amber:#E0A84A;--board:#0A2F52}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Barlow,system-ui,-apple-system,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 48px}
+.board{background:var(--board);color:#fff;padding:22px 16px 20px;margin:0 -16px 16px}
+.board .in{max-width:728px;margin:0 auto}
+h1{font:700 2.3rem/1 "Barlow Condensed","Arial Narrow",sans-serif;margin:0 0 6px}
+.big{font:700 4rem/1 "Barlow Condensed","Arial Narrow",sans-serif;margin:14px 0 0}
+.big small{font:500 1.1rem Barlow,sans-serif;margin-left:8px}
+.upd{opacity:.8;font-size:.95rem;margin:6px 0 0}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 8px}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 14px;font:500 .95rem Barlow,sans-serif;cursor:pointer}
+.chip[aria-pressed="true"]{border-color:var(--blue);color:var(--blue);font-weight:600}
+.teams{overflow-x:auto;white-space:nowrap;padding:4px 0 12px;display:flex;gap:6px}
+.deal{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--line);border-radius:10px;padding:14px;margin-bottom:10px}
+.deal.on{border-left-color:var(--grass);background:linear-gradient(90deg,var(--grass-soft),var(--surface) 55%)}
+.deal.unk{border-left-color:var(--amber)}
+.top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.vendor{font-weight:600;font-size:1.05rem;margin:0}
+.offer{margin:2px 0 4px}
+.meta{color:var(--muted);font-size:.9rem;margin:0}
+.why{font-size:.92rem;margin:6px 0 0}
+.streak{color:var(--muted);font-size:.85rem;margin:3px 0 0}
+.badge{font:600 .8rem Barlow,sans-serif;padding:3px 10px;border-radius:999px;white-space:nowrap;border:1px solid var(--line);color:var(--muted)}
+.on .badge{background:var(--grass);border-color:var(--grass);color:#fff}
+.unk .badge{border-color:var(--amber);color:var(--amber)}
+.soon{display:inline-block;font:600 .78rem Barlow,sans-serif;color:var(--amber);border:1px solid var(--amber);border-radius:999px;padding:2px 9px;margin-left:8px}
+.banner{background:var(--grass-soft);border:1px solid var(--grass);color:var(--ink);border-radius:10px;padding:10px 14px;margin:0 0 14px;font-size:.95rem}
+.banner b{color:var(--amber)}
+.actions{display:flex;gap:10px;margin-top:10px;flex-wrap:wrap;align-items:center}
+.order{font:600 .95rem Barlow,sans-serif;background:var(--blue);color:#fff;border:0;border-radius:8px;padding:6px 14px;text-decoration:none}
+.code{font:600 .95rem Barlow,sans-serif;border:1px dashed var(--blue);color:var(--blue);background:transparent;border-radius:8px;padding:5px 10px;cursor:pointer}
+.star{border:0;background:transparent;color:var(--muted);font-size:1.35rem;cursor:pointer;line-height:1;padding:2px}
+.star[aria-pressed="true"]{color:var(--red)}
+.live{background:var(--surface);border:2px solid var(--red);border-radius:12px;padding:14px;margin:0 0 18px}
+.live h2{font:700 1.5rem/1 "Barlow Condensed","Arial Narrow",sans-serif;margin:0 0 2px;display:flex;align-items:center;gap:8px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--red);animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.dot{animation:none}}
+.live .sub{color:var(--muted);font-size:.85rem;margin:0 0 10px}
+.lg{border-top:1px solid var(--line);padding:10px 0 4px}
+.lg:first-of-type{border-top:0}
+.score{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.score b{font:700 1.25rem "Barlow Condensed","Arial Narrow",sans-serif}
+.score span{color:var(--muted);font-size:.9rem;white-space:nowrap}
+.ld{display:flex;justify-content:space-between;gap:10px;font-size:.93rem;padding:5px 0}
+.ld .st{font-weight:600;white-space:nowrap}
+.ld .st.yes{color:var(--grass)}.ld .st.no{color:var(--muted)}.ld .st.maybe{color:var(--amber)}
+.up-h{font:700 1.6rem/1.1 "Barlow Condensed","Arial Narrow",sans-serif;margin:32px 0 4px}
+.up-sub{color:var(--muted);font-size:.92rem;margin:0 0 12px;max-width:62ch}
+.up{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-bottom:8px;display:grid;grid-template-columns:1fr auto;gap:4px 14px;align-items:center}
+.up .pct{font:700 1.8rem/1 "Barlow Condensed","Arial Narrow",sans-serif;text-align:right;color:var(--blue)}
+.up .bar{grid-column:1/-1;height:6px;background:var(--line);border-radius:999px;overflow:hidden}
+.up .bar span{display:block;height:100%;background:var(--blue)}
+.up .when{font-size:.9rem;margin:2px 0 0}
+.up .basis{grid-column:1/-1;color:var(--muted);font-size:.8rem;margin:0}
+a{color:var(--blue)}
+.note,.empty{color:var(--muted);font-size:.92rem}
+button:focus-visible,a:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+</style>
+</head>
+<body>
+<header class="board"><div class="in">
+  <h1>SoCal Deal Tracker</h1>
+  <p class="big" id="count" aria-live="polite">…</p>
+  <p class="upd" id="upd">Loading today's results</p>
+</div></header>
+<div class="wrap">
+  <section id="live" class="live" hidden aria-live="polite"></section>
+  <div class="filters" role="group" aria-label="Show">
+    <button class="chip" data-f="active" aria-pressed="true">Active today</button>
+    <button class="chip" data-f="starred" aria-pressed="false">My deals</button>
+    <button class="chip" data-f="all" aria-pressed="false">All deals</button>
+  </div>
+  <div class="teams" id="teams" role="group" aria-label="Team"></div>
+  <div id="banner"></div>
+  <div id="list"></div>
+  <section aria-labelledby="uph">
+    <h2 class="up-h" id="uph">Possible upcoming deals</h2>
+    <p class="up-sub">Games happening today or tomorrow that could unlock a deal. The percentage is the rough chance the deal triggers, based on how often that kind of thing usually happens in the sport, sharpened by this tracker's own record once it has a few weeks of games.</p>
+    <div id="upcoming"></div>
+  </section>
+  <p class="note">Results update every morning around 8 AM. Codes change between seasons, so check official terms before ordering.</p>
+</div>
+<script>
+const store={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+let starred=new Set(store.get("starred",[])), filter="active", team="All", data=null;
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function fmtDate(s){const d=new Date(s+"T12:00:00");return d.toLocaleDateString(undefined,{weekday:"short",month:"short",day:"numeric"})}
+function relDays(n){if(n===0)return"today";if(n===1)return"yesterday";return n+" days ago"}
+function streakLine(d){
+  if(d.lastActive==null)return"No activity in the last 90 days";
+  let s="Last active "+relDays(d.daysSinceActive);
+  if(d.recentCount>1)s+=` · ${d.recentCount}x in the last 30 days`;
+  return s;
+}
+
+// ---------------------------------------------------------------- LIVE ----
+const LIVE_TEAMS={Dodgers:{mlb:119},Angels:{mlb:108},Kings:{nhl:"LAK"},Ducks:{nhl:"ANA"},
+  Lakers:{espn:"basketball/nba",name:"Los Angeles Lakers"},Rams:{espn:"football/nfl",name:"Los Angeles Rams"},
+  LAFC:{espn:"soccer/usa.1",name:"LAFC"},Galaxy:{espn:"soccer/usa.1",name:"LA Galaxy"},
+  "San Diego FC":{espn:"soccer/usa.1",name:"San Diego FC"},Timbers:{espn:"soccer/usa.1",name:"Portland Timbers"}};
+const ptDate=(d=new Date())=>new Intl.DateTimeFormat("en-CA",{timeZone:"America/Los_Angeles"}).format(d);
+const lead=g=>g.my>g.opp?`Leading ${g.my}-${g.opp}`:g.my<g.opp?`Trailing ${g.my}-${g.opp}`:`Tied ${g.my}-${g.opp}`;
+function winRule(g,needHome){
+  if(needHome&&!g.home)return["no","Away game, doesn't count"];
+  if(g.my>g.opp)return["maybe",lead(g)+", needs to hold on"];
+  return["maybe",lead(g)+", needs to come back"];
+}
+function countRule(v,need,label){return v>=need?["yes",`${v} ${label}, unlocked`]:["maybe",`${v} ${label}, needs ${need-v} more`]}
+const LIVE_RULES={
+  panda:g=>winRule(g,true), sunright:g=>winRule(g,true), elportal:g=>winRule(g), conazucar:g=>winRule(g),
+  "mcd-angels":g=>winRule(g), "doordash-lafc":g=>winRule(g), "jitb-lakers":g=>winRule(g),
+  "jitb-dodgers":g=>countRule(g.k,7,"strikeouts"),
+  "mcd-dodgers":g=>countRule(g.runs,6,"runs"),
+  habit:g=>!g.home?["no","Away game, doesn't count"]:g.dp>0?["yes","Double play turned, unlocked"]:["maybe","No double play yet"],
+  ampm:g=>!g.home?["no","Away game, doesn't count"]:g.sb>0?["yes","Stolen base, unlocked"]:["maybe","No stolen base yet"],
+  uber:g=>g.home?["no","Home game, doesn't count"]:g.my>g.opp?["maybe",lead(g)+", needs a save to finish"]:["maybe",lead(g)+", needs a win with a save"],
+  "carls-sdfc":g=>winRule(g,true), "mcd-ducks":g=>winRule(g,true),
+  "carls-timbers":g=>["yes","Match is being played, unlocked"],
+  norms:g=>!g.home?["no","Away game, doesn't count"]:g.my>0?["yes",`${g.my} goal${g.my>1?"s":""}, unlocked`]:["maybe","No goal yet"],
+  ono:g=>{if(!g.home)return["no","Away game, doesn't count"];
+    if(g.firstGoal==="me"&&g.firstGoalMin<=45)return["yes","Scored first in the first half, unlocked"];
+    if(g.firstGoal==="opp")return["no","Opponent scored first"];
+    if(g.minute>45)return["no","No goal in the first half"];
+    return["maybe","Scoreless, needs a first-half goal"]},
+  "carls-rams":g=>g.ints>0?["yes",`${g.ints} interception${g.ints>1?"s":""}, unlocked`]:["maybe","No interception yet"],
+  "mcd-kings":g=>g.late2nd?["yes","Goal in the last minute of the 2nd, unlocked"]:(g.period>2?["no","Missed the late 2nd-period window"]:["maybe","Watching for a goal in the last minute of the 2nd"]),
+};
+async function j(url){const r=await fetch(url);if(!r.ok)throw new Error(r.status);return r.json()}
+async function liveMLB(team,id,today){
+  const s=await j(`https://statsapi.mlb.com/api/v1/schedule?sportId=1&teamId=${id}&date=${today}&hydrate=linescore`);
+  const out=[];
+  for(const day of s.dates||[])for(const g of day.games||[]){
+    if(g.status?.abstractGameState!=="Live")continue;
+    const home=g.teams.home.team.id===id, side=home?"home":"away", oside=home?"away":"home";
+    const box=(await j(`https://statsapi.mlb.com/api/v1/game/${g.gamePk}/boxscore`)).teams;
+    const ls=g.linescore||{};
+    out.push({team,home,oppTeam:g.teams[oside].team.name,my:g.teams[side].score||0,opp:g.teams[oside].score||0,
+      clock:`${ls.inningHalf||""} ${ls.currentInningOrdinal||""}`.trim(),
+      k:box[side].teamStats.pitching.strikeOuts||0,runs:box[side].teamStats.batting.runs||0,
+      sb:box[side].teamStats.batting.stolenBases||0,dp:box[oside].teamStats.batting.groundIntoDoublePlay||0});
+  }
+  return out;
+}
+async function liveNHL(team,abbrev){
+  const s=await j("https://api-web.nhle.com/v1/score/now");
+  return (s.games||[]).filter(g=>["LIVE","CRIT"].includes(g.gameState)&&[g.homeTeam.abbrev,g.awayTeam.abbrev].includes(abbrev)).map(g=>{
+    const home=g.homeTeam.abbrev===abbrev, me=home?g.homeTeam:g.awayTeam, op=home?g.awayTeam:g.homeTeam;
+    const late2nd=(g.goals||[]).some(x=>(x.teamAbbrev?.default||x.teamAbbrev)===abbrev&&x.period===2&&String(x.timeInPeriod)>="19:00");
+    return {team,home,oppTeam:op.abbrev,my:me.score||0,opp:op.score||0,period:g.periodDescriptor?.number||0,
+      clock:`P${g.periodDescriptor?.number||""} ${g.clock?.timeRemaining||""}`.trim(),late2nd};
+  });
+}
+async function liveESPN(team,path,name,today){
+  const s=await j(`https://site.api.espn.com/apis/site/v2/sports/${path}/scoreboard?dates=${today.replaceAll("-","")}`);
+  const out=[];
+  for(const ev of s.events||[]){
+    const c=ev.competitions[0], st=c.status||ev.status;
+    if(st?.type?.state!=="in")continue;
+    const me=c.competitors.find(t=>(t.team.displayName+" "+t.team.abbreviation).toLowerCase().includes(name.toLowerCase()));
+    if(!me)continue;
+    const op=c.competitors.find(t=>t!==me);
+    const g={team,home:me.homeAway==="home",oppTeam:op.team.displayName,my:+me.score||0,opp:+op.score||0,clock:st.type.shortDetail||""};
+    if(path.startsWith("soccer")){
+      const goals=(c.details||[]).filter(d=>d.scoringPlay).map(d=>({min:parseInt(d.clock?.displayValue)||999,me:String(d.team?.id)===String(me.team.id)})).sort((a,b)=>a.min-b.min);
+      g.firstGoal=goals[0]?(goals[0].me?"me":"opp"):null; g.firstGoalMin=goals[0]?.min??999;
+      g.minute=parseInt(st.displayClock)||0;
+    }
+    if(path==="football/nfl"){
+      g.ints=0;
+      try{const sum=await j(`https://site.api.espn.com/apis/site/v2/sports/football/nfl/summary?event=${ev.id}`);
+        for(const t of sum.boxscore?.players||[])if(String(t.team?.id)===String(me.team.id))
+          for(const cat of t.statistics||[])if(cat.name==="interceptions"&&cat.totals)g.ints=parseInt(cat.totals[0])||0;}catch(e){}
+    }
+    out.push(g);
+  }
+  return out;
+}
+let liveTimer=null, liveFailed=new Set();
+async function checkLive(){
+  if(document.hidden)return schedule(60000);
+  const today=ptDate(), games=[];
+  if(window.DEMO_LIVE){games.push(...window.DEMO_LIVE)}
+  else{
+    const jobs=Object.entries(LIVE_TEAMS).map(async([team,cfg])=>{
+      try{
+        if(cfg.mlb)games.push(...await liveMLB(team,cfg.mlb,today));
+        else if(cfg.nhl)games.push(...await liveNHL(team,cfg.nhl));
+        else games.push(...await liveESPN(team,cfg.espn,cfg.name,today));
+        liveFailed.delete(team);
+      }catch(e){liveFailed.add(team)}
+    });
+    await Promise.all(jobs);
+  }
+  renderLive(games);
+  schedule(games.length?30000:300000);
+}
+function schedule(ms){clearTimeout(liveTimer);liveTimer=setTimeout(checkLive,ms)}
+document.addEventListener("visibilitychange",()=>{if(!document.hidden)checkLive()});
+function renderLive(games){
+  const el=document.getElementById("live");
+  const rows=games.map(g=>{
+    const deals=(data?.deals||[]).filter(d=>d.team===g.team&&LIVE_RULES[d.id]);
+    if(!deals.length)return"";
+    const lines=deals.map(d=>{const[s,t]=LIVE_RULES[d.id](g);
+      return `<div class="ld"><span>${esc(d.vendor)}</span><span class="st ${s}">${s==="yes"?"✓ ":""}${esc(t)}</span></div>`}).join("");
+    return `<div class="lg"><div class="score"><b>${esc(g.team)} ${g.my}, ${esc(g.oppTeam)} ${g.opp}</b><span>${esc(g.clock)}</span></div>${lines}</div>`;
+  }).join("");
+  if(!rows){el.hidden=true;el.innerHTML="";return}
+  const t=new Date().toLocaleTimeString([],{hour:"numeric",minute:"2-digit",second:"2-digit"});
+  el.innerHTML=`<h2><span class="dot" aria-hidden="true"></span>Live now</h2><p class="sub">Tracking deals during the game. Refreshes every 30 seconds, last checked ${t}. "Unlocked" means the deal is locked in for tomorrow; win-based deals still need the final result.</p>${rows}`;
+  el.hidden=false;
+}
+
+function renderUpcoming(){
+  const el=document.getElementById("upcoming"); el.innerHTML="";
+  let ups=(data.upcoming||[]).filter(u=>team==="All"||u.team===team);
+  if(filter==="starred") ups=ups.filter(u=>starred.has(u.id));
+  if(!ups.length){el.innerHTML=`<p class="empty">No deal-eligible games today or tomorrow${team!=="All"?" for this team":""}.</p>`;return}
+  ups.forEach(u=>{
+    const pct=Math.round(u.prob*100);
+    const c=document.createElement("article"); c.className="up";
+    c.innerHTML=`<div><p class="vendor">${esc(u.vendor)}</p><p class="offer">${esc(u.offer)}</p>
+      <p class="when">${esc(u.matchup)}, ${esc(fmtDate(u.gameDate))}. Needs: ${esc(u.when.toLowerCase())}. Would be active ${esc(fmtDate(u.dealDate))}.</p></div>
+      <div class="pct" aria-label="${pct} percent chance">${pct}%</div>
+      <div class="bar" aria-hidden="true"><span style="width:${pct}%"></span></div>
+      <p class="basis">${esc(u.basis)}</p>`;
+    el.appendChild(c);
+  });
+}
+function render(){
+  const deals=data.deals, n=deals.filter(d=>d.active).length;
+  document.getElementById("count").innerHTML=`${n}<small>deal${n===1?"":"s"} active today</small>`;
+  const u=new Date(data.updated);
+  document.getElementById("upd").textContent=`Based on ${fmtDate(data.gameDate)} games. Updated ${u.toLocaleDateString(undefined,{weekday:"short"})} ${u.toLocaleTimeString([], {hour:"numeric",minute:"2-digit"})}.`;
+  const teams=["All",...new Set(deals.map(d=>d.team))], tEl=document.getElementById("teams");
+  tEl.innerHTML=""; teams.forEach(t=>{const b=document.createElement("button");b.className="chip";b.textContent=t;b.setAttribute("aria-pressed",t===team);b.onclick=()=>{team=t;render()};tEl.appendChild(b)});
+  const soon=deals.filter(d=>d.endingSoon);
+  const bEl=document.getElementById("banner");
+  if(soon.length){
+    const names=soon.slice(0,3).map(d=>`<b>${esc(d.vendor)}</b> (${fmtDate(d.ends)})`).join(", ");
+    bEl.innerHTML=`<div class="banner">⏳ ${soon.length} promo${soon.length===1?"":"s"} for the season wrap${soon.length===1?"s":""} up soon: ${names}${soon.length>3?", and more":""}. These stop running for the year on that date, separate from whether they're active today — use them while they last.</div>`;
+  } else bEl.innerHTML="";
+  let items=deals.filter(d=>(team==="All"||d.team===team)&&(filter==="all"||(filter==="active"&&d.active)||(filter==="starred"&&starred.has(d.id))));
+  items.sort((a,b)=>(b.active===true)-(a.active===true));
+  const list=document.getElementById("list"); list.innerHTML="";
+  if(!items.length){list.innerHTML=`<p class="empty">${filter==="starred"?"Tap the star on any deal to save it here.":filter==="active"?"Nothing active today. Check back tomorrow morning.":"No deals for this team."}</p>`;return}
+  items.forEach(d=>{
+    const cls=d.active===true?" on":d.active===null?" unk":"";
+    const el=document.createElement("article"); el.className="deal"+cls;
+    const soonTag=d.endingSoon?`<span class="soon" title="This promo stops running for the season on ${fmtDate(d.ends)} — separate from whether it's active today.">Promo ends ${fmtDate(d.ends)}</span>`:"";
+    el.innerHTML=`<div class="top"><div><p class="vendor">${esc(d.vendor)}</p><p class="offer">${esc(d.offer)}${soonTag}</p><p class="meta">${esc(d.team)}: ${esc(d.when)}</p></div><span class="badge">${d.active===true?"Active today":d.active===null?"Couldn't check":"Not active"}</span></div><p class="why">${esc(d.reason)}</p><p class="streak">${esc(streakLine(d))}</p><div class="actions"></div>`;
+    const a=el.querySelector(".actions");
+    const s=document.createElement("button");s.className="star";s.textContent="★";s.setAttribute("aria-pressed",starred.has(d.id));s.setAttribute("aria-label",(starred.has(d.id)?"Remove ":"Save ")+d.vendor);
+    s.onclick=()=>{starred.has(d.id)?starred.delete(d.id):starred.add(d.id);store.set("starred",[...starred]);render()};a.appendChild(s);
+    if(d.active&&d.order){const o=document.createElement("a");o.className="order";o.href=d.order;o.target="_blank";o.rel="noopener";o.textContent=d.orderLabel||"Order now";a.appendChild(o)}
+    if(d.code){const c=document.createElement("button");c.className="code";c.textContent=d.code;c.setAttribute("aria-label","Copy code "+d.code);
+      c.onclick=async()=>{try{await navigator.clipboard.writeText(d.code);c.textContent="Copied"}catch(e){}setTimeout(()=>c.textContent=d.code,1500)};a.appendChild(c)}
+    else if(d.how){const h=document.createElement("span");h.className="meta";h.textContent=d.how;a.appendChild(h)}
+    if(d.near){const m=document.createElement("a");m.href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(d.near+(d.near.includes(",")?"":" near me"));m.target="_blank";m.rel="noopener";m.textContent="Nearest location";a.appendChild(m)}
+    const l=document.createElement("a");l.href=d.url;l.target="_blank";l.rel="noopener";l.textContent="Details";a.appendChild(l);
+    list.appendChild(el);
+  });
+}
+const _render=render; render=function(){_render(); renderUpcoming();};
+document.querySelectorAll("[data-f]").forEach(b=>b.onclick=()=>{filter=b.dataset.f;b.parentElement.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));render()});
+(async()=>{
+  try{
+    data=window.DEMO_STATUS||await (await fetch("status.json?"+Date.now())).json();
+    render();
+    checkLive();
+  }catch(e){
+    document.getElementById("count").textContent="No results yet";
+    document.getElementById("upd").textContent="Run the Update deals workflow on GitHub once, then refresh.";
+  }
+})();
+</script>
+</body>
+</html>
