@@ -1,0 +1,26 @@
+name: Update deals
+on:
+  schedule:
+    - cron: "0 15 * * *"   # 8 AM Pacific (7 AM in winter)
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python update.py
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          PAGE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+      - name: Save results
+        run: |
+          git config user.name "deal-bot"
+          git config user.email "deal-bot@users.noreply.github.com"
+          git add docs/status.json docs/history.json
+          git diff --cached --quiet || git commit -m "Update deals"
+          git push
