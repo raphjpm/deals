@@ -1,0 +1,156 @@
+{
+ "panda": [
+  {
+   "date": "2026-09-28",
+   "active": false,
+   "played": false
+  }
+ ],
+ "jitb-dodgers": [
+  {
+   "date": "2026-09-28",
+   "active": false,
+   "played": false
+  }
+ ],
+ "mcd-dodgers": [
+  {
+   "date": "2026-09-28",
+   "active": false,
+   "played": false
+  }
+ ],
+ "habit": [
+  {
+   "date": "2026-09-28",
+   "active": false,
+   "played": false
+  }
+ ],
+ "ampm": [
+  {
+   "date": "2026-09-28",
+   "active": false,
+   "played": false
+  }
+ ],
+ "sunright": [
+  {
+   "date": "2026-09-28",
+   "active": false,
+   "played": false
+  }
+ ],
+ "uber": [
+  {
+   "date": "2026-09-28",
+   "active": false,
+   "played": false
+  }
+ ],
+ "elportal": [
+  {
+   "date": "2026-09-28",
+   "active": false,
+   "played": false
+  }
+ ],
+ "conazucar": [
+  {
+   "date": "2026-09-28",
+   "active": false,
+   "played": false
+  }
+ ],
+ "mcd-angels": [
+  {
+   "date": "2026-09-28",
+   "active": false,
+   "played": false
+  }
+ ],
+ "baja": [
+  {
+   "date": "2026-09-28",
+   "active": false,
+   "played": false
+  }
+ ],
+ "firehouse": [
+  {
+   "date": "2026-09-28",
+   "active": true,
+   "played": true
+  }
+ ],
+ "ono": [
+  {
+   "date": "2026-09-28",
+   "active": null,
+   "played": false
+  }
+ ],
+ "doordash-lafc": [
+  {
+   "date": "2026-09-28",
+   "active": null,
+   "played": false
+  }
+ ],
+ "norms": [
+  {
+   "date": "2026-09-28",
+   "active": null,
+   "played": false
+  }
+ ],
+ "carls-sdfc": [
+  {
+   "date": "2026-09-28",
+   "active": null,
+   "played": false
+  }
+ ],
+ "carls-timbers": [
+  {
+   "date": "2026-09-28",
+   "active": null,
+   "played": false
+  }
+ ],
+ "carls-rams": [
+  {
+   "date": "2026-09-28",
+   "active": null,
+   "played": false
+  }
+ ],
+ "mcd-ducks": [
+  {
+   "date": "2026-09-28",
+   "active": false,
+   "played": false
+  }
+ ],
+ "mcd-kings": [
+  {
+   "date": "2026-09-28",
+   "active": false,
+   "played": false
+  }
+ ],
+ "jitb-lakers": [
+  {
+   "date": "2026-09-28",
+   "active": null,
+   "played": false
+  }
+ ],
+ "doordash-nba": [
+  {
+   "date": "2026-09-28",
+   "active": null,
+   "played": false
+  }
+ ]
+}
