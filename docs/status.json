@@ -1,6 +1,6 @@
 {
- "updated": "2026-09-29T12:50-07:00",
- "gameDate": "2026-09-28",
+ "updated": "2026-09-30T12:53-07:00",
+ "gameDate": "2026-09-29",
  "deals": [
   {
    "id": "panda",
@@ -66,7 +66,7 @@
    "order": "https://order.habitburger.com/",
    "near": "The Habit Burger Grill",
    "url": "https://www.habitburger.com/dodgers/",
-   "daysLeft": -2,
+   "daysLeft": -3,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -187,7 +187,7 @@
    "follow": true,
    "ends": "2026-09-27",
    "url": "https://www.bajablasthomeruns.com",
-   "daysLeft": -2,
+   "daysLeft": -3,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -208,9 +208,9 @@
    "url": "https://www.firehousesubs.com/offer-terms",
    "active": true,
    "reason": "Los Angeles Dodgers at San Francisco Giants went 10 innings",
-   "lastActive": "2026-09-28",
+   "lastActive": "2026-09-29",
    "daysSinceActive": 0,
-   "recentCount": 1
+   "recentCount": 2
   },
   {
    "id": "ono",
