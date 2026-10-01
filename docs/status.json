@@ -1,6 +1,6 @@
 {
- "updated": "2026-09-30T12:53-07:00",
- "gameDate": "2026-09-29",
+ "updated": "2026-10-01T13:11-07:00",
+ "gameDate": "2026-09-30",
  "deals": [
   {
    "id": "panda",
@@ -66,7 +66,7 @@
    "order": "https://order.habitburger.com/",
    "near": "The Habit Burger Grill",
    "url": "https://www.habitburger.com/dodgers/",
-   "daysLeft": -3,
+   "daysLeft": -4,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -187,7 +187,7 @@
    "follow": true,
    "ends": "2026-09-27",
    "url": "https://www.bajablasthomeruns.com",
-   "daysLeft": -3,
+   "daysLeft": -4,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -206,10 +206,10 @@
    "order": "https://www.firehousesubs.com/",
    "near": "Firehouse Subs",
    "url": "https://www.firehousesubs.com/offer-terms",
-   "active": true,
-   "reason": "Los Angeles Dodgers at San Francisco Giants went 10 innings",
+   "active": false,
+   "reason": "Only redeemable Monday to Wednesday",
    "lastActive": "2026-09-29",
-   "daysSinceActive": 0,
+   "daysSinceActive": 1,
    "recentCount": 2
   },
   {
@@ -223,8 +223,8 @@
    "order": "https://order.onohawaiianbbq.com/",
    "near": "Ono Hawaiian BBQ",
    "url": "https://onohawaiianbbq.com/lafc/",
-   "active": null,
-   "reason": "Couldn't check today",
+   "active": false,
+   "reason": "No match yesterday",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -239,8 +239,8 @@
    "follow": true,
    "order": "https://www.doordash.com/",
    "url": "https://www.instagram.com/stories/lafc/",
-   "active": null,
-   "reason": "Couldn't check today",
+   "active": false,
+   "reason": "No match yesterday",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -256,8 +256,8 @@
    "order": "https://norms.com/",
    "near": "Norms Restaurant",
    "url": "https://www.lagalaxy.com/norms",
-   "active": null,
-   "reason": "Couldn't check today",
+   "active": false,
+   "reason": "No match in the last 2 days",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -273,8 +273,8 @@
    "order": "https://order.carlsjr.com/",
    "near": "Carl's Jr",
    "url": "https://www.instagram.com/stories/sandiegofc/",
-   "active": null,
-   "reason": "Couldn't check today",
+   "active": false,
+   "reason": "No match yesterday",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -290,8 +290,8 @@
    "order": "https://order.carlsjr.com/",
    "near": "Carl's Jr",
    "url": "https://www.timbers.com/carlsjr",
-   "active": null,
-   "reason": "Couldn't check today",
+   "active": false,
+   "reason": "No match yesterday",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -307,8 +307,8 @@
    "order": "https://order.carlsjr.com/",
    "near": "Carl's Jr",
    "url": "https://www.therams.com/game-day/promotions",
-   "active": null,
-   "reason": "Couldn't check today",
+   "active": false,
+   "reason": "No game yesterday",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -343,8 +343,8 @@
    "orderLabel": "Open app",
    "near": "McDonald's",
    "url": "https://www.mcdonalds.com/us/en-us.html",
-   "active": false,
-   "reason": "No game yesterday",
+   "active": null,
+   "reason": "Couldn't check today",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -360,8 +360,8 @@
    "order": "https://www.jackinthebox.com/",
    "near": "Jack in the Box",
    "url": "https://www.jackinthebox.com/location",
-   "active": null,
-   "reason": "Couldn't check today",
+   "active": false,
+   "reason": "No game yesterday",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -376,8 +376,8 @@
    "follow": false,
    "order": "https://www.doordash.com/",
    "url": "https://www.doordash.com/",
-   "active": null,
-   "reason": "Couldn't check today",
+   "active": false,
+   "reason": "No NBA games yesterday",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -385,90 +385,10 @@
  ],
  "errors": [
   {
-   "deal": "ono",
-   "error": "HTTPError: HTTP Error 403: Forbidden",
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/deals/deals/update.py\", line 312, in run\n    active, reason = deal[\"check\"](ctx)\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/deals/deals/update.py\", line 150, in check\n    found += espn_team_games(\"soccer/usa.1\", names, ctx[\"y\"] - timedelta(days=i))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/deals/deals/update.py\", line 130, in espn_team_games\n    for ev in espn_events(path, d):\n              ^^^^^^^^^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 403: Forbidden\n"
-  },
-  {
-   "deal": "doordash-lafc",
-   "error": "HTTPError: HTTP Error 403: Forbidden",
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/deals/deals/update.py\", line 312, in run\n    active, reason = deal[\"check\"](ctx)\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/deals/deals/update.py\", line 150, in check\n    found += espn_team_games(\"soccer/usa.1\", names, ctx[\"y\"] - timedelta(days=i))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/deals/deals/update.py\", line 130, in espn_team_games\n    for ev in espn_events(path, d):\n              ^^^^^^^^^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 403: Forbidden\n"
-  },
-  {
-   "deal": "norms",
-   "error": "HTTPError: HTTP Error 403: Forbidden",
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/deals/deals/update.py\", line 312, in run\n    active, reason = deal[\"check\"](ctx)\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/deals/deals/update.py\", line 150, in check\n    found += espn_team_games(\"soccer/usa.1\", names, ctx[\"y\"] - timedelta(days=i))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/deals/deals/update.py\", line 130, in espn_team_games\n    for ev in espn_events(path, d):\n              ^^^^^^^^^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 403: Forbidden\n"
-  },
-  {
-   "deal": "carls-sdfc",
-   "error": "HTTPError: HTTP Error 403: Forbidden",
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/deals/deals/update.py\", line 312, in run\n    active, reason = deal[\"check\"](ctx)\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/deals/deals/update.py\", line 150, in check\n    found += espn_team_games(\"soccer/usa.1\", names, ctx[\"y\"] - timedelta(days=i))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/deals/deals/update.py\", line 130, in espn_team_games\n    for ev in espn_events(path, d):\n              ^^^^^^^^^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 403: Forbidden\n"
-  },
-  {
-   "deal": "carls-timbers",
-   "error": "HTTPError: HTTP Error 403: Forbidden",
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/deals/deals/update.py\", line 312, in run\n    active, reason = deal[\"check\"](ctx)\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/deals/deals/update.py\", line 150, in check\n    found += espn_team_games(\"soccer/usa.1\", names, ctx[\"y\"] - timedelta(days=i))\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/deals/deals/update.py\", line 130, in espn_team_games\n    for ev in espn_events(path, d):\n              ^^^^^^^^^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 403: Forbidden\n"
-  },
-  {
-   "deal": "carls-rams",
-   "error": "HTTPError: HTTP Error 403: Forbidden",
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/deals/deals/update.py\", line 312, in run\n    active, reason = deal[\"check\"](ctx)\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/deals/deals/update.py\", line 182, in rams_int\n    games = espn_team_games(\"football/nfl\", [\"Los Angeles Rams\"], ctx[\"y\"])\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/deals/deals/update.py\", line 130, in espn_team_games\n    for ev in espn_events(path, d):\n              ^^^^^^^^^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 403: Forbidden\n"
-  },
-  {
-   "deal": "jitb-lakers",
-   "error": "HTTPError: HTTP Error 403: Forbidden",
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/deals/deals/update.py\", line 312, in run\n    active, reason = deal[\"check\"](ctx)\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/deals/deals/update.py\", line 177, in lakers_win\n    games = espn_team_games(\"basketball/nba\", [\"Los Angeles Lakers\"], ctx[\"y\"])\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/deals/deals/update.py\", line 130, in espn_team_games\n    for ev in espn_events(path, d):\n              ^^^^^^^^^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 403: Forbidden\n"
-  },
-  {
-   "deal": "doordash-nba",
-   "error": "HTTPError: HTTP Error 403: Forbidden",
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/deals/deals/update.py\", line 312, in run\n    active, reason = deal[\"check\"](ctx)\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/deals/deals/update.py\", line 165, in nba_fifty\n    for ev in espn_events(\"basketball/nba\", ctx[\"y\"]):\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/deals/deals/update.py\", line 126, in espn_events\n    return get(f\"{ESPN}/{path}/scoreboard?dates={compact(d)}\").get(\"events\", [])\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 403: Forbidden\n"
-  },
-  {
-   "deal": "ono",
-   "error": "upcoming: HTTPError: HTTP Error 403: Forbidden"
-  },
-  {
-   "deal": "doordash-lafc",
-   "error": "upcoming: HTTPError: HTTP Error 403: Forbidden"
-  },
-  {
-   "deal": "norms",
-   "error": "upcoming: HTTPError: HTTP Error 403: Forbidden"
-  },
-  {
-   "deal": "carls-sdfc",
-   "error": "upcoming: HTTPError: HTTP Error 403: Forbidden"
-  },
-  {
-   "deal": "carls-timbers",
-   "error": "upcoming: HTTPError: HTTP Error 403: Forbidden"
-  },
-  {
-   "deal": "carls-rams",
-   "error": "upcoming: HTTPError: HTTP Error 403: Forbidden"
-  },
-  {
-   "deal": "jitb-lakers",
-   "error": "upcoming: HTTPError: HTTP Error 403: Forbidden"
-  },
-  {
-   "deal": "doordash-nba",
-   "error": "upcoming: HTTPError: HTTP Error 403: Forbidden"
+   "deal": "mcd-kings",
+   "error": "AttributeError: 'str' object has no attribute 'get'",
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/deals/deals/update.py\", line 312, in run\n    active, reason = deal[\"check\"](ctx)\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/deals/deals/update.py\", line 119, in kings_late_2nd\n    if goal.get(\"teamAbbrev\", {}).get(\"default\", goal.get(\"teamAbbrev\")) == \"LAK\" \\\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'str' object has no attribute 'get'\n"
   }
  ],
- "upcoming": [
-  {
-   "id": "mcd-kings",
-   "vendor": "McDonald's",
-   "team": "Kings",
-   "offer": "Free McFlurry with $2 purchase",
-   "when": "Kings goal in the last minute of the 2nd",
-   "gameDate": "2026-09-30",
-   "dealDate": "2026-10-01",
-   "matchup": "Kings at COL",
-   "prob": 0.08,
-   "basis": "Estimate from typical league rates"
-  }
- ]
+ "upcoming": []
 }
