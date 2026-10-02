@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-01T13:11-07:00",
- "gameDate": "2026-09-30",
+ "updated": "2026-10-02T12:47-07:00",
+ "gameDate": "2026-10-01",
  "deals": [
   {
    "id": "panda",
@@ -66,7 +66,7 @@
    "order": "https://order.habitburger.com/",
    "near": "The Habit Burger Grill",
    "url": "https://www.habitburger.com/dodgers/",
-   "daysLeft": -4,
+   "daysLeft": -5,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -187,7 +187,7 @@
    "follow": true,
    "ends": "2026-09-27",
    "url": "https://www.bajablasthomeruns.com",
-   "daysLeft": -4,
+   "daysLeft": -5,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -209,7 +209,7 @@
    "active": false,
    "reason": "Only redeemable Monday to Wednesday",
    "lastActive": "2026-09-29",
-   "daysSinceActive": 1,
+   "daysSinceActive": 2,
    "recentCount": 2
   },
   {
@@ -343,8 +343,8 @@
    "orderLabel": "Open app",
    "near": "McDonald's",
    "url": "https://www.mcdonalds.com/us/en-us.html",
-   "active": null,
-   "reason": "Couldn't check today",
+   "active": false,
+   "reason": "No game yesterday",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -383,12 +383,127 @@
    "recentCount": 0
   }
  ],
- "errors": [
+ "errors": [],
+ "upcoming": [
   {
-   "deal": "mcd-kings",
-   "error": "AttributeError: 'str' object has no attribute 'get'",
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/deals/deals/update.py\", line 312, in run\n    active, reason = deal[\"check\"](ctx)\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/deals/deals/update.py\", line 119, in kings_late_2nd\n    if goal.get(\"teamAbbrev\", {}).get(\"default\", goal.get(\"teamAbbrev\")) == \"LAK\" \\\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'str' object has no attribute 'get'\n"
+   "id": "jitb-dodgers",
+   "vendor": "Jack in the Box",
+   "team": "Dodgers",
+   "offer": "Free Jumbo Jack with a large Coke",
+   "when": "Dodgers pitchers strike out 7+",
+   "gameDate": "2026-10-03",
+   "dealDate": "2026-10-04",
+   "matchup": "Dodgers vs Atlanta Braves",
+   "prob": 0.62,
+   "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "elportal",
+   "vendor": "El Portal (Pasadena)",
+   "team": "Dodgers",
+   "offer": "$12 combo plates and $7 margaritas",
+   "when": "Any Dodgers win",
+   "gameDate": "2026-10-03",
+   "dealDate": "2026-10-04",
+   "matchup": "Dodgers vs Atlanta Braves",
+   "prob": 0.58,
+   "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "conazucar",
+   "vendor": "Con Az\u00facar Caf\u00e9 (Sylmar)",
+   "team": "Dodgers",
+   "offer": "Free size upgrade and Dodgers latte art",
+   "when": "Any Dodgers win",
+   "gameDate": "2026-10-03",
+   "dealDate": "2026-10-04",
+   "matchup": "Dodgers vs Atlanta Braves",
+   "prob": 0.58,
+   "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "ampm",
+   "vendor": "ampm",
+   "team": "Dodgers",
+   "offer": "Free Dodger Dog and 16 oz Coke",
+   "when": "Dodgers steal a base at home",
+   "gameDate": "2026-10-03",
+   "dealDate": "2026-10-04",
+   "matchup": "Dodgers vs Atlanta Braves",
+   "prob": 0.45,
+   "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "panda",
+   "vendor": "Panda Express",
+   "team": "Dodgers",
+   "offer": "$7 Panda Plate",
+   "when": "Dodgers home win",
+   "gameDate": "2026-10-03",
+   "dealDate": "2026-10-04",
+   "matchup": "Dodgers vs Atlanta Braves",
+   "prob": 0.33,
+   "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "sunright",
+   "vendor": "Sunright Tea",
+   "team": "Dodgers",
+   "offer": "Buy one, get one Blue Heaven Frostie",
+   "when": "Dodgers home win",
+   "gameDate": "2026-10-03",
+   "dealDate": "2026-10-04",
+   "matchup": "Dodgers vs Atlanta Braves",
+   "prob": 0.33,
+   "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "mcd-dodgers",
+   "vendor": "McDonald's",
+   "team": "Dodgers",
+   "offer": "Free 6 pc McNuggets with $2 purchase",
+   "when": "Dodgers score 6+ runs",
+   "gameDate": "2026-10-03",
+   "dealDate": "2026-10-04",
+   "matchup": "Dodgers vs Atlanta Braves",
+   "prob": 0.32,
+   "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "mcd-kings",
+   "vendor": "McDonald's",
+   "team": "Kings",
+   "offer": "Free McFlurry with $2 purchase",
+   "when": "Kings goal in the last minute of the 2nd",
+   "gameDate": "2026-10-03",
+   "dealDate": "2026-10-04",
+   "matchup": "Kings at SJS",
+   "prob": 0.08,
+   "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "doordash-nba",
+   "vendor": "DoorDash",
+   "team": "NBA",
+   "offer": "50% off one order, up to $10 (DashPass)",
+   "when": "Any NBA player scores 50+",
+   "gameDate": "2026-10-03",
+   "dealDate": "2026-10-04",
+   "matchup": "Any NBA game",
+   "prob": 0.05,
+   "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "firehouse",
+   "vendor": "Firehouse Subs",
+   "team": "MLB",
+   "offer": "Buy one medium sub, get one free (Mon to Wed)",
+   "when": "Any MLB game Fri to Sun goes to extras",
+   "gameDate": "2026-10-02",
+   "dealDate": "2026-10-05",
+   "matchup": "Any MLB game this weekend",
+   "prob": 0.55,
+   "basis": "Estimate from typical league rates"
   }
- ],
- "upcoming": []
+ ]
 }
