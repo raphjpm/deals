@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-02T12:47-07:00",
- "gameDate": "2026-10-01",
+ "updated": "2026-10-03T11:34-07:00",
+ "gameDate": "2026-10-02",
  "deals": [
   {
    "id": "panda",
@@ -66,7 +66,7 @@
    "order": "https://order.habitburger.com/",
    "near": "The Habit Burger Grill",
    "url": "https://www.habitburger.com/dodgers/",
-   "daysLeft": -5,
+   "daysLeft": -6,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -187,7 +187,7 @@
    "follow": true,
    "ends": "2026-09-27",
    "url": "https://www.bajablasthomeruns.com",
-   "daysLeft": -5,
+   "daysLeft": -6,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -209,7 +209,7 @@
    "active": false,
    "reason": "Only redeemable Monday to Wednesday",
    "lastActive": "2026-09-29",
-   "daysSinceActive": 2,
+   "daysSinceActive": 3,
    "recentCount": 2
   },
   {
@@ -326,7 +326,7 @@
    "near": "McDonald's",
    "url": "https://www.nhl.com/ducks/fans/mcdonalds-ducks-win",
    "active": false,
-   "reason": "No game yesterday",
+   "reason": "at VGK, 4-3",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -499,10 +499,34 @@
    "team": "MLB",
    "offer": "Buy one medium sub, get one free (Mon to Wed)",
    "when": "Any MLB game Fri to Sun goes to extras",
-   "gameDate": "2026-10-02",
+   "gameDate": "2026-10-03",
    "dealDate": "2026-10-05",
    "matchup": "Any MLB game this weekend",
    "prob": 0.55,
+   "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "carls-rams",
+   "vendor": "Carl's Jr",
+   "team": "Rams",
+   "offer": "Free Famous Star with Cheese with large drink",
+   "when": "Rams get an interception",
+   "gameDate": "2026-10-04",
+   "dealDate": "2026-10-05",
+   "matchup": "Rams at Philadelphia Eagles",
+   "prob": 0.55,
+   "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "mcd-ducks",
+   "vendor": "McDonald's",
+   "team": "Ducks",
+   "offer": "$2 Sausage, Egg & Cheese McGriddles",
+   "when": "Ducks home win",
+   "gameDate": "2026-10-04",
+   "dealDate": "2026-10-05",
+   "matchup": "Ducks vs FLA",
+   "prob": 0.42,
    "basis": "Estimate from typical league rates"
   }
  ]
