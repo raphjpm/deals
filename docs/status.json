@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-17T10:47-07:00",
- "gameDate": "2026-10-16",
+ "updated": "2026-10-18T10:52-07:00",
+ "gameDate": "2026-10-17",
  "deals": [
   {
    "id": "panda",
@@ -66,7 +66,7 @@
    "order": "https://order.habitburger.com/",
    "near": "The Habit Burger Grill",
    "url": "https://www.habitburger.com/dodgers/",
-   "daysLeft": -20,
+   "daysLeft": -21,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -187,7 +187,7 @@
    "follow": true,
    "ends": "2026-09-27",
    "url": "https://www.bajablasthomeruns.com",
-   "daysLeft": -20,
+   "daysLeft": -21,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -209,7 +209,7 @@
    "active": false,
    "reason": "Only redeemable Monday to Wednesday",
    "lastActive": "2026-09-29",
-   "daysSinceActive": 17,
+   "daysSinceActive": 18,
    "recentCount": 2
   },
   {
@@ -224,7 +224,7 @@
    "near": "Ono Hawaiian BBQ",
    "url": "https://onohawaiianbbq.com/lafc/",
    "active": false,
-   "reason": "No match yesterday",
+   "reason": "at New York City FC, 1-1",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -240,7 +240,7 @@
    "order": "https://www.doordash.com/",
    "url": "https://www.instagram.com/stories/lafc/",
    "active": false,
-   "reason": "No match yesterday",
+   "reason": "at New York City FC, 1-1",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -256,11 +256,11 @@
    "order": "https://norms.com/",
    "near": "Norms Restaurant",
    "url": "https://www.lagalaxy.com/norms",
-   "active": false,
-   "reason": "No match in the last 2 days",
-   "lastActive": null,
-   "daysSinceActive": null,
-   "recentCount": 0
+   "active": true,
+   "reason": "vs San Diego FC, 2-2",
+   "lastActive": "2026-10-17",
+   "daysSinceActive": 0,
+   "recentCount": 1
   },
   {
    "id": "carls-sdfc",
@@ -274,7 +274,7 @@
    "near": "Carl's Jr",
    "url": "https://www.instagram.com/stories/sandiegofc/",
    "active": false,
-   "reason": "No match yesterday",
+   "reason": "at LA Galaxy, 2-2",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -290,11 +290,11 @@
    "order": "https://order.carlsjr.com/",
    "near": "Carl's Jr",
    "url": "https://www.timbers.com/carlsjr",
-   "active": false,
-   "reason": "No match yesterday",
-   "lastActive": "2026-10-10",
-   "daysSinceActive": 6,
-   "recentCount": 1
+   "active": true,
+   "reason": "vs Colorado Rapids, 0-0",
+   "lastActive": "2026-10-17",
+   "daysSinceActive": 0,
+   "recentCount": 2
   },
   {
    "id": "carls-rams",
@@ -326,7 +326,7 @@
    "near": "McDonald's",
    "url": "https://www.nhl.com/ducks/fans/mcdonalds-ducks-win",
    "active": false,
-   "reason": "vs BOS, 2-4",
+   "reason": "No game yesterday",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -343,8 +343,8 @@
    "orderLabel": "Open app",
    "near": "McDonald's",
    "url": "https://www.mcdonalds.com/us/en-us.html",
-   "active": false,
-   "reason": "No game yesterday",
+   "active": null,
+   "reason": "Couldn't check today",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -361,7 +361,7 @@
    "near": "Jack in the Box",
    "url": "https://www.jackinthebox.com/location",
    "active": false,
-   "reason": "vs Denver Nuggets, 106-121",
+   "reason": "No game yesterday",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -377,69 +377,27 @@
    "order": "https://www.doordash.com/",
    "url": "https://www.doordash.com/",
    "active": false,
-   "reason": "Top scorer: Joel Embiid, 27 pts",
+   "reason": "No NBA games yesterday",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
   }
  ],
- "errors": [],
+ "errors": [
+  {
+   "deal": "mcd-kings",
+   "error": "AttributeError: 'str' object has no attribute 'get'",
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/deals/deals/update.py\", line 312, in run\n    active, reason = deal[\"check\"](ctx)\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/deals/deals/update.py\", line 119, in kings_late_2nd\n    if goal.get(\"teamAbbrev\", {}).get(\"default\", goal.get(\"teamAbbrev\")) == \"LAK\" \\\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'str' object has no attribute 'get'\n"
+  }
+ ],
  "upcoming": [
-  {
-   "id": "carls-timbers",
-   "vendor": "Carl's Jr",
-   "team": "Timbers",
-   "offer": "Free signature item, no purchase needed",
-   "when": "Timbers played",
-   "gameDate": "2026-10-17",
-   "dealDate": "2026-10-18",
-   "matchup": "Timbers vs Colorado Rapids",
-   "prob": 1.0,
-   "basis": "Estimate from typical league rates"
-  },
-  {
-   "id": "norms",
-   "vendor": "Norms",
-   "team": "Galaxy",
-   "offer": "Free short stack of hotcakes",
-   "when": "Galaxy score at home",
-   "gameDate": "2026-10-17",
-   "dealDate": "2026-10-18",
-   "matchup": "Galaxy vs San Diego FC",
-   "prob": 0.68,
-   "basis": "Estimate from typical league rates"
-  },
-  {
-   "id": "doordash-lafc",
-   "vendor": "DoorDash",
-   "team": "LAFC",
-   "offer": "$10 off $20+",
-   "when": "LAFC win",
-   "gameDate": "2026-10-17",
-   "dealDate": "2026-10-18",
-   "matchup": "LAFC at New York City FC",
-   "prob": 0.48,
-   "basis": "Estimate from typical league rates"
-  },
-  {
-   "id": "mcd-kings",
-   "vendor": "McDonald's",
-   "team": "Kings",
-   "offer": "Free McFlurry with $2 purchase",
-   "when": "Kings goal in the last minute of the 2nd",
-   "gameDate": "2026-10-17",
-   "dealDate": "2026-10-18",
-   "matchup": "Kings vs BOS",
-   "prob": 0.08,
-   "basis": "Estimate from typical league rates"
-  },
   {
    "id": "firehouse",
    "vendor": "Firehouse Subs",
    "team": "MLB",
    "offer": "Buy one medium sub, get one free (Mon to Wed)",
    "when": "Any MLB game Fri to Sun goes to extras",
-   "gameDate": "2026-10-17",
+   "gameDate": "2026-10-18",
    "dealDate": "2026-10-19",
    "matchup": "Any MLB game this weekend",
    "prob": 0.55,
