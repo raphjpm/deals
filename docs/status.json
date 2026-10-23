@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-21T12:09-07:00",
- "gameDate": "2026-10-20",
+ "updated": "2026-10-23T11:54-07:00",
+ "gameDate": "2026-10-22",
  "deals": [
   {
    "id": "panda",
@@ -66,7 +66,7 @@
    "order": "https://order.habitburger.com/",
    "near": "The Habit Burger Grill",
    "url": "https://www.habitburger.com/dodgers/",
-   "daysLeft": -24,
+   "daysLeft": -26,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -187,7 +187,7 @@
    "follow": true,
    "ends": "2026-09-27",
    "url": "https://www.bajablasthomeruns.com",
-   "daysLeft": -24,
+   "daysLeft": -26,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -207,9 +207,9 @@
    "near": "Firehouse Subs",
    "url": "https://www.firehousesubs.com/offer-terms",
    "active": false,
-   "reason": "No extra-inning games last weekend",
+   "reason": "Only redeemable Monday to Wednesday",
    "lastActive": "2026-09-29",
-   "daysSinceActive": 21,
+   "daysSinceActive": 23,
    "recentCount": 2
   },
   {
@@ -259,7 +259,7 @@
    "active": false,
    "reason": "No match in the last 2 days",
    "lastActive": "2026-10-17",
-   "daysSinceActive": 3,
+   "daysSinceActive": 5,
    "recentCount": 1
   },
   {
@@ -293,7 +293,7 @@
    "active": false,
    "reason": "No match yesterday",
    "lastActive": "2026-10-17",
-   "daysSinceActive": 3,
+   "daysSinceActive": 5,
    "recentCount": 2
   },
   {
@@ -326,7 +326,7 @@
    "near": "McDonald's",
    "url": "https://www.nhl.com/ducks/fans/mcdonalds-ducks-win",
    "active": false,
-   "reason": "at NYI, 2-3",
+   "reason": "at NJD, 1-4",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -377,7 +377,7 @@
    "order": "https://www.doordash.com/",
    "url": "https://www.doordash.com/",
    "active": false,
-   "reason": "Top scorer: Paul George, 38 pts",
+   "reason": "Top scorer: Tyrese Maxey, 32 pts",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -397,9 +397,9 @@
    "team": "Lakers",
    "offer": "2 free tacos with any drink",
    "when": "Lakers win",
-   "gameDate": "2026-10-21",
-   "dealDate": "2026-10-22",
-   "matchup": "Lakers vs Golden State Warriors",
+   "gameDate": "2026-10-23",
+   "dealDate": "2026-10-24",
+   "matchup": "Lakers vs LA Clippers",
    "prob": 0.55,
    "basis": "Estimate from typical league rates"
   },
@@ -409,10 +409,34 @@
    "team": "NBA",
    "offer": "50% off one order, up to $10 (DashPass)",
    "when": "Any NBA player scores 50+",
-   "gameDate": "2026-10-21",
-   "dealDate": "2026-10-22",
+   "gameDate": "2026-10-23",
+   "dealDate": "2026-10-24",
    "matchup": "Any NBA game",
    "prob": 0.05,
+   "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "carls-timbers",
+   "vendor": "Carl's Jr",
+   "team": "Timbers",
+   "offer": "Free signature item, no purchase needed",
+   "when": "Timbers played",
+   "gameDate": "2026-10-24",
+   "dealDate": "2026-10-25",
+   "matchup": "Timbers vs Charlotte FC",
+   "prob": 1.0,
+   "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "carls-sdfc",
+   "vendor": "Carl's Jr",
+   "team": "San Diego FC",
+   "offer": "Free Western Bacon Cheeseburger with large drink",
+   "when": "SDFC home win",
+   "gameDate": "2026-10-24",
+   "dealDate": "2026-10-25",
+   "matchup": "San Diego FC vs Seattle Sounders FC",
+   "prob": 0.45,
    "basis": "Estimate from typical league rates"
   },
   {
@@ -421,10 +445,22 @@
    "team": "Kings",
    "offer": "Free McFlurry with $2 purchase",
    "when": "Kings goal in the last minute of the 2nd",
-   "gameDate": "2026-10-22",
-   "dealDate": "2026-10-23",
-   "matchup": "Kings at NYI",
+   "gameDate": "2026-10-24",
+   "dealDate": "2026-10-25",
+   "matchup": "Kings at NJD",
    "prob": 0.08,
+   "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "firehouse",
+   "vendor": "Firehouse Subs",
+   "team": "MLB",
+   "offer": "Buy one medium sub, get one free (Mon to Wed)",
+   "when": "Any MLB game Fri to Sun goes to extras",
+   "gameDate": "2026-10-23",
+   "dealDate": "2026-10-26",
+   "matchup": "Any MLB game this weekend",
+   "prob": 0.55,
    "basis": "Estimate from typical league rates"
   }
  ]
