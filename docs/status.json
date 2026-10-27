@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-25T11:13-07:00",
- "gameDate": "2026-10-24",
+ "updated": "2026-10-27T12:53-07:00",
+ "gameDate": "2026-10-26",
  "deals": [
   {
    "id": "panda",
@@ -66,7 +66,7 @@
    "order": "https://order.habitburger.com/",
    "near": "The Habit Burger Grill",
    "url": "https://www.habitburger.com/dodgers/",
-   "daysLeft": -28,
+   "daysLeft": -30,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -187,7 +187,7 @@
    "follow": true,
    "ends": "2026-09-27",
    "url": "https://www.bajablasthomeruns.com",
-   "daysLeft": -28,
+   "daysLeft": -30,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -207,9 +207,9 @@
    "near": "Firehouse Subs",
    "url": "https://www.firehousesubs.com/offer-terms",
    "active": false,
-   "reason": "Only redeemable Monday to Wednesday",
+   "reason": "No extra-inning games last weekend",
    "lastActive": "2026-09-29",
-   "daysSinceActive": 25,
+   "daysSinceActive": 27,
    "recentCount": 2
   },
   {
@@ -257,9 +257,9 @@
    "near": "Norms Restaurant",
    "url": "https://www.lagalaxy.com/norms",
    "active": false,
-   "reason": "No match in the last 2 days",
+   "reason": "at LAFC, 2-2",
    "lastActive": "2026-10-17",
-   "daysSinceActive": 7,
+   "daysSinceActive": 9,
    "recentCount": 1
   },
   {
@@ -274,7 +274,7 @@
    "near": "Carl's Jr",
    "url": "https://www.instagram.com/stories/sandiegofc/",
    "active": false,
-   "reason": "vs Seattle Sounders FC, 2-2",
+   "reason": "No match yesterday",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -290,10 +290,10 @@
    "order": "https://order.carlsjr.com/",
    "near": "Carl's Jr",
    "url": "https://www.timbers.com/carlsjr",
-   "active": true,
-   "reason": "vs Charlotte FC, 3-2",
+   "active": false,
+   "reason": "No match yesterday",
    "lastActive": "2026-10-24",
-   "daysSinceActive": 0,
+   "daysSinceActive": 2,
    "recentCount": 3
   },
   {
@@ -326,7 +326,7 @@
    "near": "McDonald's",
    "url": "https://www.nhl.com/ducks/fans/mcdonalds-ducks-win",
    "active": false,
-   "reason": "at PHI, 5-4",
+   "reason": "No game yesterday",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -377,7 +377,7 @@
    "order": "https://www.doordash.com/",
    "url": "https://www.doordash.com/",
    "active": false,
-   "reason": "Top scorer: Devin Booker, 43 pts",
+   "reason": "Top scorer: Anthony Edwards, 47 pts",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -392,63 +392,39 @@
  ],
  "upcoming": [
   {
-   "id": "firehouse",
-   "vendor": "Firehouse Subs",
-   "team": "MLB",
-   "offer": "Buy one medium sub, get one free (Mon to Wed)",
-   "when": "Any MLB game Fri to Sun goes to extras",
-   "gameDate": "2026-10-25",
-   "dealDate": "2026-10-26",
-   "matchup": "Any MLB game this weekend",
-   "prob": 0.55,
-   "basis": "Estimate from typical league rates"
-  },
-  {
-   "id": "carls-rams",
-   "vendor": "Carl's Jr",
-   "team": "Rams",
-   "offer": "Free Famous Star with Cheese with large drink",
-   "when": "Rams get an interception",
-   "gameDate": "2026-10-25",
-   "dealDate": "2026-10-26",
-   "matchup": "Rams at Las Vegas Raiders",
-   "prob": 0.55,
-   "basis": "Estimate from typical league rates"
-  },
-  {
    "id": "jitb-lakers",
    "vendor": "Jack in the Box",
    "team": "Lakers",
    "offer": "2 free tacos with any drink",
    "when": "Lakers win",
-   "gameDate": "2026-10-25",
-   "dealDate": "2026-10-26",
-   "matchup": "Lakers at Utah Jazz",
+   "gameDate": "2026-10-27",
+   "dealDate": "2026-10-28",
+   "matchup": "Lakers vs Portland Trail Blazers",
    "prob": 0.55,
    "basis": "Estimate from typical league rates"
   },
   {
-   "id": "doordash-lafc",
-   "vendor": "DoorDash",
-   "team": "LAFC",
-   "offer": "$10 off $20+",
-   "when": "LAFC win",
-   "gameDate": "2026-10-25",
-   "dealDate": "2026-10-26",
-   "matchup": "LAFC vs LA Galaxy",
-   "prob": 0.48,
-   "basis": "Estimate from typical league rates"
+   "id": "mcd-ducks",
+   "vendor": "McDonald's",
+   "team": "Ducks",
+   "offer": "$2 Sausage, Egg & Cheese McGriddles",
+   "when": "Ducks home win",
+   "gameDate": "2026-10-27",
+   "dealDate": "2026-10-28",
+   "matchup": "Ducks vs VAN",
+   "prob": 0.22,
+   "basis": "Blend of league rates and this tracker's last 9 games"
   },
   {
-   "id": "ono",
-   "vendor": "Ono Hawaiian BBQ",
-   "team": "LAFC",
-   "offer": "$5.99 Chicken Plate Lunch",
-   "when": "LAFC scores first in the first half at home",
-   "gameDate": "2026-10-25",
-   "dealDate": "2026-10-26",
-   "matchup": "LAFC vs LA Galaxy",
-   "prob": 0.3,
+   "id": "mcd-kings",
+   "vendor": "McDonald's",
+   "team": "Kings",
+   "offer": "Free McFlurry with $2 purchase",
+   "when": "Kings goal in the last minute of the 2nd",
+   "gameDate": "2026-10-27",
+   "dealDate": "2026-10-28",
+   "matchup": "Kings at CHI",
+   "prob": 0.08,
    "basis": "Estimate from typical league rates"
   },
   {
@@ -457,22 +433,22 @@
    "team": "NBA",
    "offer": "50% off one order, up to $10 (DashPass)",
    "when": "Any NBA player scores 50+",
-   "gameDate": "2026-10-25",
-   "dealDate": "2026-10-26",
+   "gameDate": "2026-10-27",
+   "dealDate": "2026-10-28",
    "matchup": "Any NBA game",
-   "prob": 0.05,
-   "basis": "Estimate from typical league rates"
+   "prob": 0.03,
+   "basis": "Blend of league rates and this tracker's last 8 games"
   },
   {
-   "id": "mcd-kings",
-   "vendor": "McDonald's",
-   "team": "Kings",
-   "offer": "Free McFlurry with $2 purchase",
-   "when": "Kings goal in the last minute of the 2nd",
-   "gameDate": "2026-10-26",
-   "dealDate": "2026-10-27",
-   "matchup": "Kings at NYR",
-   "prob": 0.08,
+   "id": "carls-timbers",
+   "vendor": "Carl's Jr",
+   "team": "Timbers",
+   "offer": "Free signature item, no purchase needed",
+   "when": "Timbers played",
+   "gameDate": "2026-10-28",
+   "dealDate": "2026-10-29",
+   "matchup": "Timbers at St. Louis CITY SC",
+   "prob": 1.0,
    "basis": "Estimate from typical league rates"
   }
  ]
