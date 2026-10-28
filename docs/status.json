@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-27T12:53-07:00",
- "gameDate": "2026-10-26",
+ "updated": "2026-10-28T13:07-07:00",
+ "gameDate": "2026-10-27",
  "deals": [
   {
    "id": "panda",
@@ -66,7 +66,7 @@
    "order": "https://order.habitburger.com/",
    "near": "The Habit Burger Grill",
    "url": "https://www.habitburger.com/dodgers/",
-   "daysLeft": -30,
+   "daysLeft": -31,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -187,7 +187,7 @@
    "follow": true,
    "ends": "2026-09-27",
    "url": "https://www.bajablasthomeruns.com",
-   "daysLeft": -30,
+   "daysLeft": -31,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -209,7 +209,7 @@
    "active": false,
    "reason": "No extra-inning games last weekend",
    "lastActive": "2026-09-29",
-   "daysSinceActive": 27,
+   "daysSinceActive": 28,
    "recentCount": 2
   },
   {
@@ -257,9 +257,9 @@
    "near": "Norms Restaurant",
    "url": "https://www.lagalaxy.com/norms",
    "active": false,
-   "reason": "at LAFC, 2-2",
+   "reason": "No match in the last 2 days",
    "lastActive": "2026-10-17",
-   "daysSinceActive": 9,
+   "daysSinceActive": 10,
    "recentCount": 1
   },
   {
@@ -293,7 +293,7 @@
    "active": false,
    "reason": "No match yesterday",
    "lastActive": "2026-10-24",
-   "daysSinceActive": 2,
+   "daysSinceActive": 3,
    "recentCount": 3
   },
   {
@@ -326,7 +326,7 @@
    "near": "McDonald's",
    "url": "https://www.nhl.com/ducks/fans/mcdonalds-ducks-win",
    "active": false,
-   "reason": "No game yesterday",
+   "reason": "vs VAN, 5-6",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -361,7 +361,7 @@
    "near": "Jack in the Box",
    "url": "https://www.jackinthebox.com/location",
    "active": false,
-   "reason": "No game yesterday",
+   "reason": "vs Portland Trail Blazers, 129-136",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -377,7 +377,7 @@
    "order": "https://www.doordash.com/",
    "url": "https://www.doordash.com/",
    "active": false,
-   "reason": "Top scorer: Anthony Edwards, 47 pts",
+   "reason": "Top scorer: Luka Doncic, 41 pts",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -392,54 +392,6 @@
  ],
  "upcoming": [
   {
-   "id": "jitb-lakers",
-   "vendor": "Jack in the Box",
-   "team": "Lakers",
-   "offer": "2 free tacos with any drink",
-   "when": "Lakers win",
-   "gameDate": "2026-10-27",
-   "dealDate": "2026-10-28",
-   "matchup": "Lakers vs Portland Trail Blazers",
-   "prob": 0.55,
-   "basis": "Estimate from typical league rates"
-  },
-  {
-   "id": "mcd-ducks",
-   "vendor": "McDonald's",
-   "team": "Ducks",
-   "offer": "$2 Sausage, Egg & Cheese McGriddles",
-   "when": "Ducks home win",
-   "gameDate": "2026-10-27",
-   "dealDate": "2026-10-28",
-   "matchup": "Ducks vs VAN",
-   "prob": 0.22,
-   "basis": "Blend of league rates and this tracker's last 9 games"
-  },
-  {
-   "id": "mcd-kings",
-   "vendor": "McDonald's",
-   "team": "Kings",
-   "offer": "Free McFlurry with $2 purchase",
-   "when": "Kings goal in the last minute of the 2nd",
-   "gameDate": "2026-10-27",
-   "dealDate": "2026-10-28",
-   "matchup": "Kings at CHI",
-   "prob": 0.08,
-   "basis": "Estimate from typical league rates"
-  },
-  {
-   "id": "doordash-nba",
-   "vendor": "DoorDash",
-   "team": "NBA",
-   "offer": "50% off one order, up to $10 (DashPass)",
-   "when": "Any NBA player scores 50+",
-   "gameDate": "2026-10-27",
-   "dealDate": "2026-10-28",
-   "matchup": "Any NBA game",
-   "prob": 0.03,
-   "basis": "Blend of league rates and this tracker's last 8 games"
-  },
-  {
    "id": "carls-timbers",
    "vendor": "Carl's Jr",
    "team": "Timbers",
@@ -449,6 +401,54 @@
    "dealDate": "2026-10-29",
    "matchup": "Timbers at St. Louis CITY SC",
    "prob": 1.0,
+   "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "jitb-lakers",
+   "vendor": "Jack in the Box",
+   "team": "Lakers",
+   "offer": "2 free tacos with any drink",
+   "when": "Lakers win",
+   "gameDate": "2026-10-28",
+   "dealDate": "2026-10-29",
+   "matchup": "Lakers at LA Clippers",
+   "prob": 0.55,
+   "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "doordash-nba",
+   "vendor": "DoorDash",
+   "team": "NBA",
+   "offer": "50% off one order, up to $10 (DashPass)",
+   "when": "Any NBA player scores 50+",
+   "gameDate": "2026-10-28",
+   "dealDate": "2026-10-29",
+   "matchup": "Any NBA game",
+   "prob": 0.03,
+   "basis": "Blend of league rates and this tracker's last 9 games"
+  },
+  {
+   "id": "mcd-ducks",
+   "vendor": "McDonald's",
+   "team": "Ducks",
+   "offer": "$2 Sausage, Egg & Cheese McGriddles",
+   "when": "Ducks home win",
+   "gameDate": "2026-10-29",
+   "dealDate": "2026-10-30",
+   "matchup": "Ducks vs BUF",
+   "prob": 0.21,
+   "basis": "Blend of league rates and this tracker's last 10 games"
+  },
+  {
+   "id": "mcd-kings",
+   "vendor": "McDonald's",
+   "team": "Kings",
+   "offer": "Free McFlurry with $2 purchase",
+   "when": "Kings goal in the last minute of the 2nd",
+   "gameDate": "2026-10-29",
+   "dealDate": "2026-10-30",
+   "matchup": "Kings vs OTT",
+   "prob": 0.08,
    "basis": "Estimate from typical league rates"
   }
  ]
