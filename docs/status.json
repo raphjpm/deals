@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-28T13:07-07:00",
- "gameDate": "2026-10-27",
+ "updated": "2026-10-30T12:52-07:00",
+ "gameDate": "2026-10-29",
  "deals": [
   {
    "id": "panda",
@@ -66,7 +66,7 @@
    "order": "https://order.habitburger.com/",
    "near": "The Habit Burger Grill",
    "url": "https://www.habitburger.com/dodgers/",
-   "daysLeft": -31,
+   "daysLeft": -33,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -187,7 +187,7 @@
    "follow": true,
    "ends": "2026-09-27",
    "url": "https://www.bajablasthomeruns.com",
-   "daysLeft": -31,
+   "daysLeft": -33,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -207,10 +207,10 @@
    "near": "Firehouse Subs",
    "url": "https://www.firehousesubs.com/offer-terms",
    "active": false,
-   "reason": "No extra-inning games last weekend",
+   "reason": "Only redeemable Monday to Wednesday",
    "lastActive": "2026-09-29",
-   "daysSinceActive": 28,
-   "recentCount": 2
+   "daysSinceActive": 30,
+   "recentCount": 1
   },
   {
    "id": "ono",
@@ -259,7 +259,7 @@
    "active": false,
    "reason": "No match in the last 2 days",
    "lastActive": "2026-10-17",
-   "daysSinceActive": 10,
+   "daysSinceActive": 12,
    "recentCount": 1
   },
   {
@@ -293,7 +293,7 @@
    "active": false,
    "reason": "No match yesterday",
    "lastActive": "2026-10-24",
-   "daysSinceActive": 3,
+   "daysSinceActive": 5,
    "recentCount": 3
   },
   {
@@ -326,7 +326,7 @@
    "near": "McDonald's",
    "url": "https://www.nhl.com/ducks/fans/mcdonalds-ducks-win",
    "active": false,
-   "reason": "vs VAN, 5-6",
+   "reason": "vs BUF, 6-7",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -361,7 +361,7 @@
    "near": "Jack in the Box",
    "url": "https://www.jackinthebox.com/location",
    "active": false,
-   "reason": "vs Portland Trail Blazers, 129-136",
+   "reason": "No game yesterday",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -377,7 +377,7 @@
    "order": "https://www.doordash.com/",
    "url": "https://www.doordash.com/",
    "active": false,
-   "reason": "Top scorer: Luka Doncic, 41 pts",
+   "reason": "Top scorer: Darius Acuff Jr., 34 pts",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -392,26 +392,14 @@
  ],
  "upcoming": [
   {
-   "id": "carls-timbers",
-   "vendor": "Carl's Jr",
-   "team": "Timbers",
-   "offer": "Free signature item, no purchase needed",
-   "when": "Timbers played",
-   "gameDate": "2026-10-28",
-   "dealDate": "2026-10-29",
-   "matchup": "Timbers at St. Louis CITY SC",
-   "prob": 1.0,
-   "basis": "Estimate from typical league rates"
-  },
-  {
    "id": "jitb-lakers",
    "vendor": "Jack in the Box",
    "team": "Lakers",
    "offer": "2 free tacos with any drink",
    "when": "Lakers win",
-   "gameDate": "2026-10-28",
-   "dealDate": "2026-10-29",
-   "matchup": "Lakers at LA Clippers",
+   "gameDate": "2026-10-30",
+   "dealDate": "2026-10-31",
+   "matchup": "Lakers at Golden State Warriors",
    "prob": 0.55,
    "basis": "Estimate from typical league rates"
   },
@@ -421,23 +409,23 @@
    "team": "NBA",
    "offer": "50% off one order, up to $10 (DashPass)",
    "when": "Any NBA player scores 50+",
-   "gameDate": "2026-10-28",
-   "dealDate": "2026-10-29",
+   "gameDate": "2026-10-30",
+   "dealDate": "2026-10-31",
    "matchup": "Any NBA game",
    "prob": 0.03,
-   "basis": "Blend of league rates and this tracker's last 9 games"
+   "basis": "Blend of league rates and this tracker's last 10 games"
   },
   {
-   "id": "mcd-ducks",
-   "vendor": "McDonald's",
-   "team": "Ducks",
-   "offer": "$2 Sausage, Egg & Cheese McGriddles",
-   "when": "Ducks home win",
-   "gameDate": "2026-10-29",
-   "dealDate": "2026-10-30",
-   "matchup": "Ducks vs BUF",
-   "prob": 0.21,
-   "basis": "Blend of league rates and this tracker's last 10 games"
+   "id": "norms",
+   "vendor": "Norms",
+   "team": "Galaxy",
+   "offer": "Free short stack of hotcakes",
+   "when": "Galaxy score at home",
+   "gameDate": "2026-10-31",
+   "dealDate": "2026-11-01",
+   "matchup": "Galaxy vs Austin FC",
+   "prob": 0.68,
+   "basis": "Estimate from typical league rates"
   },
   {
    "id": "mcd-kings",
@@ -445,10 +433,22 @@
    "team": "Kings",
    "offer": "Free McFlurry with $2 purchase",
    "when": "Kings goal in the last minute of the 2nd",
-   "gameDate": "2026-10-29",
-   "dealDate": "2026-10-30",
-   "matchup": "Kings vs OTT",
+   "gameDate": "2026-10-31",
+   "dealDate": "2026-11-01",
+   "matchup": "Kings vs BUF",
    "prob": 0.08,
+   "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "firehouse",
+   "vendor": "Firehouse Subs",
+   "team": "MLB",
+   "offer": "Buy one medium sub, get one free (Mon to Wed)",
+   "when": "Any MLB game Fri to Sun goes to extras",
+   "gameDate": "2026-10-30",
+   "dealDate": "2026-11-02",
+   "matchup": "Any MLB game this weekend",
+   "prob": 0.55,
    "basis": "Estimate from typical league rates"
   }
  ]
