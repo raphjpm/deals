@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-04T13:05-08:00",
- "gameDate": "2026-11-03",
+ "updated": "2026-11-06T12:43-08:00",
+ "gameDate": "2026-11-05",
  "deals": [
   {
    "id": "panda",
@@ -66,7 +66,7 @@
    "order": "https://order.habitburger.com/",
    "near": "The Habit Burger Grill",
    "url": "https://www.habitburger.com/dodgers/",
-   "daysLeft": -38,
+   "daysLeft": -40,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -187,7 +187,7 @@
    "follow": true,
    "ends": "2026-09-27",
    "url": "https://www.bajablasthomeruns.com",
-   "daysLeft": -38,
+   "daysLeft": -40,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -207,9 +207,9 @@
    "near": "Firehouse Subs",
    "url": "https://www.firehousesubs.com/offer-terms",
    "active": false,
-   "reason": "No extra-inning games last weekend",
+   "reason": "Only redeemable Monday to Wednesday",
    "lastActive": "2026-09-29",
-   "daysSinceActive": 35,
+   "daysSinceActive": 37,
    "recentCount": 0
   },
   {
@@ -259,7 +259,7 @@
    "active": false,
    "reason": "No match in the last 2 days",
    "lastActive": "2026-10-31",
-   "daysSinceActive": 3,
+   "daysSinceActive": 5,
    "recentCount": 2
   },
   {
@@ -293,7 +293,7 @@
    "active": false,
    "reason": "No match yesterday",
    "lastActive": "2026-10-24",
-   "daysSinceActive": 10,
+   "daysSinceActive": 12,
    "recentCount": 3
   },
   {
@@ -326,7 +326,7 @@
    "near": "McDonald's",
    "url": "https://www.nhl.com/ducks/fans/mcdonalds-ducks-win",
    "active": false,
-   "reason": "at VAN, 5-4",
+   "reason": "at EDM, 5-4",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -377,7 +377,7 @@
    "order": "https://www.doordash.com/",
    "url": "https://www.doordash.com/",
    "active": false,
-   "reason": "No NBA games yesterday",
+   "reason": "Top scorer: Devin Booker, 30 pts",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -391,22 +391,10 @@
    "team": "Lakers",
    "offer": "2 free tacos with any drink",
    "when": "Lakers win",
-   "gameDate": "2026-11-04",
-   "dealDate": "2026-11-05",
-   "matchup": "Lakers at Sacramento Kings",
+   "gameDate": "2026-11-06",
+   "dealDate": "2026-11-07",
+   "matchup": "Lakers vs Portland Trail Blazers",
    "prob": 0.55,
-   "basis": "Estimate from typical league rates"
-  },
-  {
-   "id": "mcd-kings",
-   "vendor": "McDonald's",
-   "team": "Kings",
-   "offer": "Free McFlurry with $2 purchase",
-   "when": "Kings goal in the last minute of the 2nd",
-   "gameDate": "2026-11-04",
-   "dealDate": "2026-11-05",
-   "matchup": "Kings vs SJS",
-   "prob": 0.08,
    "basis": "Estimate from typical league rates"
   },
   {
@@ -415,11 +403,71 @@
    "team": "NBA",
    "offer": "50% off one order, up to $10 (DashPass)",
    "when": "Any NBA player scores 50+",
-   "gameDate": "2026-11-04",
-   "dealDate": "2026-11-05",
+   "gameDate": "2026-11-06",
+   "dealDate": "2026-11-07",
    "matchup": "Any NBA game",
    "prob": 0.02,
-   "basis": "Blend of league rates and this tracker's last 12 games"
+   "basis": "Blend of league rates and this tracker's last 13 games"
+  },
+  {
+   "id": "carls-timbers",
+   "vendor": "Carl's Jr",
+   "team": "Timbers",
+   "offer": "Free signature item, no purchase needed",
+   "when": "Timbers played",
+   "gameDate": "2026-11-07",
+   "dealDate": "2026-11-08",
+   "matchup": "Timbers at Austin FC",
+   "prob": 1.0,
+   "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "doordash-lafc",
+   "vendor": "DoorDash",
+   "team": "LAFC",
+   "offer": "$10 off $20+",
+   "when": "LAFC win",
+   "gameDate": "2026-11-07",
+   "dealDate": "2026-11-08",
+   "matchup": "LAFC at Seattle Sounders FC",
+   "prob": 0.48,
+   "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "carls-sdfc",
+   "vendor": "Carl's Jr",
+   "team": "San Diego FC",
+   "offer": "Free Western Bacon Cheeseburger with large drink",
+   "when": "SDFC home win",
+   "gameDate": "2026-11-07",
+   "dealDate": "2026-11-08",
+   "matchup": "San Diego FC vs Sporting Kansas City",
+   "prob": 0.45,
+   "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "mcd-kings",
+   "vendor": "McDonald's",
+   "team": "Kings",
+   "offer": "Free McFlurry with $2 purchase",
+   "when": "Kings goal in the last minute of the 2nd",
+   "gameDate": "2026-11-07",
+   "dealDate": "2026-11-08",
+   "matchup": "Kings vs PIT",
+   "prob": 0.08,
+   "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "firehouse",
+   "vendor": "Firehouse Subs",
+   "team": "MLB",
+   "offer": "Buy one medium sub, get one free (Mon to Wed)",
+   "when": "Any MLB game Fri to Sun goes to extras",
+   "gameDate": "2026-11-06",
+   "dealDate": "2026-11-09",
+   "matchup": "Any MLB game this weekend",
+   "prob": 0.55,
+   "basis": "Estimate from typical league rates"
   }
  ]
 }
