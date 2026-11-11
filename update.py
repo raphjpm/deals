@@ -7,7 +7,7 @@ the tracker page, and pushes a phone notification via ntfy for followed deals.
 Local test:  python update.py --date 2026-09-16 --dry-run
 (--date is TODAY's date; the script checks the day before it.)
 """
-import argparse, json, os, re, sys, traceback, urllib.request
+import argparse, json, os, re, sys, time, traceback, urllib.error, urllib.parse, urllib.request
 from datetime import datetime, timedelta, date
 from zoneinfo import ZoneInfo
 
@@ -116,7 +116,9 @@ def kings_late_2nd(ctx):
     if not games: return False, "No game yesterday"
     for g in games:
         for goal in g["goals"]:
-            if goal.get("teamAbbrev", {}).get("default", goal.get("teamAbbrev")) == "LAK" \
+            abbrev = goal.get("teamAbbrev")  # the NHL feed sends either "LAK" or {"default": "LAK"}
+            if isinstance(abbrev, dict): abbrev = abbrev.get("default")
+            if abbrev == "LAK" \
                and goal.get("period") == 2 and str(goal.get("timeInPeriod", "00:00")) >= "19:00":
                 return True, f'{g["desc"]}: goal at {goal["timeInPeriod"]} of the 2nd'
     return False, f'{games[0]["desc"]}: no goal in the final minute of the 2nd'
@@ -319,25 +321,67 @@ def run(today):
     return {"updated": datetime.now(PT).isoformat(timespec="minutes"), "gameDate": ymd(ctx["y"]),
             "deals": results, "errors": errors}
 
-def notify(topics_str, status, dry):
+TOPIC_OK = re.compile(r"^[-_A-Za-z0-9]{1,64}$")
+
+def clean_topic(t):
+    """Accept a bare topic, 'ntfy.sh/topic' or a full ntfy URL; return just the topic name."""
+    t = t.strip().strip("'\"").strip().rstrip("/")
+    return t.rsplit("/", 1)[-1].strip()
+
+def post_ntfy(topic, body, headers):
+    """Send one notification, retrying when ntfy is busy. Raises RuntimeError on failure.
+    Error text never contains the topic, because the run log is public."""
+    if not TOPIC_OK.match(topic):
+        raise RuntimeError(f"the NTFY_TOPIC secret is not a valid ntfy topic name ({len(topic)} characters; "
+                           "only letters, digits, - and _ are allowed, 64 at most). "
+                           "Re-save the secret with exactly the topic name shown in the ntfy app.")
+    url = "https://ntfy.sh/" + urllib.parse.quote(topic, safe="")
+    last = "unknown error"
+    for attempt in range(4):
+        try:
+            req = urllib.request.Request(url, data=body.encode(), headers=headers, method="POST")
+            with urllib.request.urlopen(req, timeout=30):
+                return
+        except urllib.error.HTTPError as e:
+            last = f"ntfy answered HTTP {e.code}: {e.read()[:200].decode('utf-8', 'replace')}"
+            if e.code not in (429, 500, 502, 503, 504): break  # retrying won't help
+        except Exception as e:
+            last = f"{type(e).__name__}: {getattr(e, 'reason', e)}"
+        if attempt < 3: time.sleep(10 * (attempt + 1))
+    raise RuntimeError(last)
+
+def notify(topics_str, status, dry, test=False):
+    """Returns True when every notification went out (or none was due)."""
     hits = [d for d in status["deals"] if d["active"] and d["follow"]]
     ending = [d for d in status["deals"] if d.get("endingSoon") and (d["follow"] or d["active"])]
     lines = [f'- {d["vendor"]}: {d.get("code") or d.get("how")}' for d in hits]
     if ending:
         lines.append("")
         lines += [f'- {d["vendor"]} ends in {d["daysLeft"]} day{"s" if d["daysLeft"] != 1 else ""}' for d in ending]
-    if not lines:
-        print("Nothing to notify."); return
     n = len(hits)
     title = f'{n} food deal{"s" if n != 1 else ""} active today' if n else "Deals ending soon"
+    if test:
+        title = "Test: deal tracker notifications work"
+        lines = ["If you can read this, phone notifications are set up correctly."] + ([""] + lines if lines else [])
+    if not lines:
+        print("Nothing to notify."); return True
     body = "\n".join(lines)
     if dry or not topics_str:
-        print(f"[notification preview] {title}\n{body}"); return
+        print(f"[notification preview] {title}\n{body}")
+        if test and not topics_str: print("NTFY_TOPIC is not set, so nothing was sent.")
+        return True
     headers = {"Title": title, "Tags": "hamburger", "Priority": "high"}
     if os.environ.get("PAGE_URL"): headers["Click"] = os.environ["PAGE_URL"]
-    for topic in [t.strip() for t in topics_str.split(",") if t.strip()]:
-        urllib.request.urlopen(urllib.request.Request(f"https://ntfy.sh/{topic}", data=body.encode(), headers=headers, method="POST"), timeout=30)
-    print("Sent to", topics_str.count(",") + 1, "topic(s):", title)
+    topics = [clean_topic(t) for t in topics_str.split(",") if t.strip()]
+    failed = 0
+    for i, topic in enumerate(topics, 1):
+        try:
+            post_ntfy(topic, body, headers)
+        except RuntimeError as e:
+            failed += 1
+            print(f"NOTIFICATION FAILED (topic {i} of {len(topics)}): {e}")
+    print("Sent to", len(topics) - failed, "of", len(topics), "topic(s):", title)
+    return failed == 0
 
 # ------------------------------------------------------------- UPCOMING ----
 # Rough starting chances based on typical league rates. Once this tracker has
@@ -513,6 +557,7 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("--date", help="Today's date YYYY-MM-DD (default: today, Pacific)")
     p.add_argument("--dry-run", action="store_true")
+    p.add_argument("--test-notify", action="store_true", help="Also send a test notification to your phone")
     a = p.parse_args()
     today = date.fromisoformat(a.date) if a.date else datetime.now(PT).date()
     status = run(today)
@@ -525,4 +570,6 @@ if __name__ == "__main__":
         mark = "ON " if d["active"] else ("?? " if d["active"] is None else "   ")
         print(mark, d["team"], "|", d["vendor"], "|", d["reason"])
     for e in status["errors"]: print("ERROR", e["deal"], e["error"])
-    notify(os.environ.get("NTFY_TOPIC"), status, a.dry_run)
+    # The results above are already written, so a notification problem never loses the page update.
+    if not notify(os.environ.get("NTFY_TOPIC"), status, a.dry_run, a.test_notify):
+        sys.exit("The tracker page was updated, but the phone notification could not be sent.")

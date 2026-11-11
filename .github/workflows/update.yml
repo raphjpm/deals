@@ -3,6 +3,11 @@ on:
   schedule:
     - cron: "0 15 * * *"   # 8 AM Pacific (7 AM in winter)
   workflow_dispatch:
+    inputs:
+      test_notify:
+        description: "Also send a test notification to your phone"
+        type: boolean
+        default: false
 permissions:
   contents: write
 jobs:
@@ -13,11 +18,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: python update.py
+      - run: python update.py ${{ inputs.test_notify && '--test-notify' || '' }}
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           PAGE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
       - name: Save results
+        if: always()   # keep the page update even when the notification step fails
         run: |
           git config user.name "deal-bot"
           git config user.email "deal-bot@users.noreply.github.com"
