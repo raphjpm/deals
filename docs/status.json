@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-08T11:23-08:00",
- "gameDate": "2026-11-07",
+ "updated": "2026-11-11T13:09-08:00",
+ "gameDate": "2026-11-10",
  "deals": [
   {
    "id": "panda",
@@ -66,7 +66,7 @@
    "order": "https://order.habitburger.com/",
    "near": "The Habit Burger Grill",
    "url": "https://www.habitburger.com/dodgers/",
-   "daysLeft": -42,
+   "daysLeft": -45,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -187,7 +187,7 @@
    "follow": true,
    "ends": "2026-09-27",
    "url": "https://www.bajablasthomeruns.com",
-   "daysLeft": -42,
+   "daysLeft": -45,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -207,9 +207,9 @@
    "near": "Firehouse Subs",
    "url": "https://www.firehousesubs.com/offer-terms",
    "active": false,
-   "reason": "Only redeemable Monday to Wednesday",
+   "reason": "No extra-inning games last weekend",
    "lastActive": "2026-09-29",
-   "daysSinceActive": 39,
+   "daysSinceActive": 42,
    "recentCount": 0
   },
   {
@@ -224,7 +224,7 @@
    "near": "Ono Hawaiian BBQ",
    "url": "https://onohawaiianbbq.com/lafc/",
    "active": false,
-   "reason": "at Seattle Sounders FC, 1-2",
+   "reason": "No match yesterday",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -240,7 +240,7 @@
    "order": "https://www.doordash.com/",
    "url": "https://www.instagram.com/stories/lafc/",
    "active": false,
-   "reason": "at Seattle Sounders FC, 1-2",
+   "reason": "No match yesterday",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -257,9 +257,9 @@
    "near": "Norms Restaurant",
    "url": "https://www.lagalaxy.com/norms",
    "active": false,
-   "reason": "at Real Salt Lake, 1-2",
+   "reason": "No match in the last 2 days",
    "lastActive": "2026-10-31",
-   "daysSinceActive": 7,
+   "daysSinceActive": 10,
    "recentCount": 2
   },
   {
@@ -274,7 +274,7 @@
    "near": "Carl's Jr",
    "url": "https://www.instagram.com/stories/sandiegofc/",
    "active": false,
-   "reason": "vs Sporting Kansas City, 0-1",
+   "reason": "No match yesterday",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -290,11 +290,11 @@
    "order": "https://order.carlsjr.com/",
    "near": "Carl's Jr",
    "url": "https://www.timbers.com/carlsjr",
-   "active": true,
-   "reason": "at Austin FC, 2-0",
+   "active": false,
+   "reason": "No match yesterday",
    "lastActive": "2026-11-07",
-   "daysSinceActive": 0,
-   "recentCount": 4
+   "daysSinceActive": 3,
+   "recentCount": 3
   },
   {
    "id": "carls-rams",
@@ -343,8 +343,8 @@
    "orderLabel": "Open app",
    "near": "McDonald's",
    "url": "https://www.mcdonalds.com/us/en-us.html",
-   "active": null,
-   "reason": "Couldn't check today",
+   "active": false,
+   "reason": "vs NSH, 0-3: no goal in the final minute of the 2nd",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -377,53 +377,23 @@
    "order": "https://www.doordash.com/",
    "url": "https://www.doordash.com/",
    "active": false,
-   "reason": "Top scorer: Stephen Curry, 41 pts",
+   "reason": "Top scorer: Paul George, 36 pts",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
   }
  ],
- "errors": [
-  {
-   "deal": "mcd-kings",
-   "error": "AttributeError: 'str' object has no attribute 'get'",
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/deals/deals/update.py\", line 312, in run\n    active, reason = deal[\"check\"](ctx)\n                     ^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/deals/deals/update.py\", line 119, in kings_late_2nd\n    if goal.get(\"teamAbbrev\", {}).get(\"default\", goal.get(\"teamAbbrev\")) == \"LAK\" \\\n       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'str' object has no attribute 'get'\n"
-  }
- ],
+ "errors": [],
  "upcoming": [
-  {
-   "id": "firehouse",
-   "vendor": "Firehouse Subs",
-   "team": "MLB",
-   "offer": "Buy one medium sub, get one free (Mon to Wed)",
-   "when": "Any MLB game Fri to Sun goes to extras",
-   "gameDate": "2026-11-08",
-   "dealDate": "2026-11-09",
-   "matchup": "Any MLB game this weekend",
-   "prob": 0.55,
-   "basis": "Estimate from typical league rates"
-  },
-  {
-   "id": "carls-rams",
-   "vendor": "Carl's Jr",
-   "team": "Rams",
-   "offer": "Free Famous Star with Cheese with large drink",
-   "when": "Rams get an interception",
-   "gameDate": "2026-11-08",
-   "dealDate": "2026-11-09",
-   "matchup": "Rams at Washington Commanders",
-   "prob": 0.55,
-   "basis": "Estimate from typical league rates"
-  },
   {
    "id": "jitb-lakers",
    "vendor": "Jack in the Box",
    "team": "Lakers",
    "offer": "2 free tacos with any drink",
    "when": "Lakers win",
-   "gameDate": "2026-11-08",
-   "dealDate": "2026-11-09",
-   "matchup": "Lakers at Detroit Pistons",
+   "gameDate": "2026-11-11",
+   "dealDate": "2026-11-12",
+   "matchup": "Lakers at Milwaukee Bucks",
    "prob": 0.55,
    "basis": "Estimate from typical league rates"
   },
@@ -433,9 +403,9 @@
    "team": "Ducks",
    "offer": "$2 Sausage, Egg & Cheese McGriddles",
    "when": "Ducks home win",
-   "gameDate": "2026-11-08",
-   "dealDate": "2026-11-09",
-   "matchup": "Ducks vs PIT",
+   "gameDate": "2026-11-11",
+   "dealDate": "2026-11-12",
+   "matchup": "Ducks vs NSH",
    "prob": 0.18,
    "basis": "Blend of league rates and this tracker's last 13 games"
   },
@@ -445,11 +415,23 @@
    "team": "NBA",
    "offer": "50% off one order, up to $10 (DashPass)",
    "when": "Any NBA player scores 50+",
-   "gameDate": "2026-11-08",
-   "dealDate": "2026-11-09",
+   "gameDate": "2026-11-11",
+   "dealDate": "2026-11-12",
    "matchup": "Any NBA game",
    "prob": 0.02,
-   "basis": "Blend of league rates and this tracker's last 14 games"
+   "basis": "Blend of league rates and this tracker's last 15 games"
+  },
+  {
+   "id": "mcd-kings",
+   "vendor": "McDonald's",
+   "team": "Kings",
+   "offer": "Free McFlurry with $2 purchase",
+   "when": "Kings goal in the last minute of the 2nd",
+   "gameDate": "2026-11-12",
+   "dealDate": "2026-11-13",
+   "matchup": "Kings vs NYI",
+   "prob": 0.08,
+   "basis": "Estimate from typical league rates"
   }
  ]
 }
