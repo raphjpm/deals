@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-12T13:45-08:00",
- "gameDate": "2026-11-11",
+ "updated": "2026-11-13T13:14-08:00",
+ "gameDate": "2026-11-12",
  "deals": [
   {
    "id": "panda",
@@ -66,7 +66,7 @@
    "order": "https://order.habitburger.com/",
    "near": "The Habit Burger Grill",
    "url": "https://www.habitburger.com/dodgers/",
-   "daysLeft": -46,
+   "daysLeft": -47,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -187,7 +187,7 @@
    "follow": true,
    "ends": "2026-09-27",
    "url": "https://www.bajablasthomeruns.com",
-   "daysLeft": -46,
+   "daysLeft": -47,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -209,7 +209,7 @@
    "active": false,
    "reason": "Only redeemable Monday to Wednesday",
    "lastActive": "2026-09-29",
-   "daysSinceActive": 43,
+   "daysSinceActive": 44,
    "recentCount": 0
   },
   {
@@ -259,7 +259,7 @@
    "active": false,
    "reason": "No match in the last 2 days",
    "lastActive": "2026-10-31",
-   "daysSinceActive": 11,
+   "daysSinceActive": 12,
    "recentCount": 2
   },
   {
@@ -293,7 +293,7 @@
    "active": false,
    "reason": "No match yesterday",
    "lastActive": "2026-11-07",
-   "daysSinceActive": 4,
+   "daysSinceActive": 5,
    "recentCount": 3
   },
   {
@@ -326,7 +326,7 @@
    "near": "McDonald's",
    "url": "https://www.nhl.com/ducks/fans/mcdonalds-ducks-win",
    "active": false,
-   "reason": "vs NSH, 2-4",
+   "reason": "No game yesterday",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -344,7 +344,7 @@
    "near": "McDonald's",
    "url": "https://www.mcdonalds.com/us/en-us.html",
    "active": false,
-   "reason": "No game yesterday",
+   "reason": "vs NYI, 2-5: no goal in the final minute of the 2nd",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -360,10 +360,10 @@
    "order": "https://www.jackinthebox.com/",
    "near": "Jack in the Box",
    "url": "https://www.jackinthebox.com/location",
-   "active": true,
-   "reason": "at Milwaukee Bucks, 123-112",
+   "active": false,
+   "reason": "No game yesterday",
    "lastActive": "2026-11-11",
-   "daysSinceActive": 0,
+   "daysSinceActive": 1,
    "recentCount": 1
   },
   {
@@ -376,38 +376,62 @@
    "follow": false,
    "order": "https://www.doordash.com/",
    "url": "https://www.doordash.com/",
-   "active": false,
-   "reason": "Top scorer: Franz Wagner, 38 pts",
-   "lastActive": null,
-   "daysSinceActive": null,
-   "recentCount": 0
+   "active": true,
+   "reason": "Top scorer: Cade Cunningham, 52 pts",
+   "lastActive": "2026-11-12",
+   "daysSinceActive": 0,
+   "recentCount": 1
   }
  ],
  "errors": [],
  "upcoming": [
-  {
-   "id": "mcd-kings",
-   "vendor": "McDonald's",
-   "team": "Kings",
-   "offer": "Free McFlurry with $2 purchase",
-   "when": "Kings goal in the last minute of the 2nd",
-   "gameDate": "2026-11-12",
-   "dealDate": "2026-11-13",
-   "matchup": "Kings vs NYI",
-   "prob": 0.08,
-   "basis": "Estimate from typical league rates"
-  },
   {
    "id": "doordash-nba",
    "vendor": "DoorDash",
    "team": "NBA",
    "offer": "50% off one order, up to $10 (DashPass)",
    "when": "Any NBA player scores 50+",
-   "gameDate": "2026-11-12",
-   "dealDate": "2026-11-13",
+   "gameDate": "2026-11-13",
+   "dealDate": "2026-11-14",
    "matchup": "Any NBA game",
-   "prob": 0.02,
-   "basis": "Blend of league rates and this tracker's last 16 games"
+   "prob": 0.06,
+   "basis": "Blend of league rates and this tracker's last 17 games"
+  },
+  {
+   "id": "mcd-ducks",
+   "vendor": "McDonald's",
+   "team": "Ducks",
+   "offer": "$2 Sausage, Egg & Cheese McGriddles",
+   "when": "Ducks home win",
+   "gameDate": "2026-11-14",
+   "dealDate": "2026-11-15",
+   "matchup": "Ducks vs NYI",
+   "prob": 0.18,
+   "basis": "Blend of league rates and this tracker's last 14 games"
+  },
+  {
+   "id": "mcd-kings",
+   "vendor": "McDonald's",
+   "team": "Kings",
+   "offer": "Free McFlurry with $2 purchase",
+   "when": "Kings goal in the last minute of the 2nd",
+   "gameDate": "2026-11-14",
+   "dealDate": "2026-11-15",
+   "matchup": "Kings vs CGY",
+   "prob": 0.08,
+   "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "firehouse",
+   "vendor": "Firehouse Subs",
+   "team": "MLB",
+   "offer": "Buy one medium sub, get one free (Mon to Wed)",
+   "when": "Any MLB game Fri to Sun goes to extras",
+   "gameDate": "2026-11-13",
+   "dealDate": "2026-11-16",
+   "matchup": "Any MLB game this weekend",
+   "prob": 0.55,
+   "basis": "Estimate from typical league rates"
   }
  ]
 }
