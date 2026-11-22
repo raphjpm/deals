@@ -164,6 +164,11 @@
    "date": "2026-11-20",
    "active": false,
    "played": false
+  },
+  {
+   "date": "2026-11-21",
+   "active": false,
+   "played": false
   }
  ],
  "jitb-dodgers": [
@@ -329,6 +334,11 @@
   },
   {
    "date": "2026-11-20",
+   "active": false,
+   "played": false
+  },
+  {
+   "date": "2026-11-21",
    "active": false,
    "played": false
   }
@@ -498,6 +508,11 @@
    "date": "2026-11-20",
    "active": false,
    "played": false
+  },
+  {
+   "date": "2026-11-21",
+   "active": false,
+   "played": false
   }
  ],
  "habit": [
@@ -663,6 +678,11 @@
   },
   {
    "date": "2026-11-20",
+   "active": false,
+   "played": false
+  },
+  {
+   "date": "2026-11-21",
    "active": false,
    "played": false
   }
@@ -832,6 +852,11 @@
    "date": "2026-11-20",
    "active": false,
    "played": false
+  },
+  {
+   "date": "2026-11-21",
+   "active": false,
+   "played": false
   }
  ],
  "sunright": [
@@ -997,6 +1022,11 @@
   },
   {
    "date": "2026-11-20",
+   "active": false,
+   "played": false
+  },
+  {
+   "date": "2026-11-21",
    "active": false,
    "played": false
   }
@@ -1166,6 +1196,11 @@
    "date": "2026-11-20",
    "active": false,
    "played": false
+  },
+  {
+   "date": "2026-11-21",
+   "active": false,
+   "played": false
   }
  ],
  "elportal": [
@@ -1331,6 +1366,11 @@
   },
   {
    "date": "2026-11-20",
+   "active": false,
+   "played": false
+  },
+  {
+   "date": "2026-11-21",
    "active": false,
    "played": false
   }
@@ -1500,6 +1540,11 @@
    "date": "2026-11-20",
    "active": false,
    "played": false
+  },
+  {
+   "date": "2026-11-21",
+   "active": false,
+   "played": false
   }
  ],
  "mcd-angels": [
@@ -1665,6 +1710,11 @@
   },
   {
    "date": "2026-11-20",
+   "active": false,
+   "played": false
+  },
+  {
+   "date": "2026-11-21",
    "active": false,
    "played": false
   }
@@ -1834,6 +1884,11 @@
    "date": "2026-11-20",
    "active": false,
    "played": false
+  },
+  {
+   "date": "2026-11-21",
+   "active": false,
+   "played": false
   }
  ],
  "firehouse": [
@@ -1999,6 +2054,11 @@
   },
   {
    "date": "2026-11-20",
+   "active": false,
+   "played": false
+  },
+  {
+   "date": "2026-11-21",
    "active": false,
    "played": false
   }
@@ -2168,6 +2228,11 @@
    "date": "2026-11-20",
    "active": false,
    "played": false
+  },
+  {
+   "date": "2026-11-21",
+   "active": false,
+   "played": false
   }
  ],
  "doordash-lafc": [
@@ -2333,6 +2398,11 @@
   },
   {
    "date": "2026-11-20",
+   "active": false,
+   "played": false
+  },
+  {
+   "date": "2026-11-21",
    "active": false,
    "played": false
   }
@@ -2502,6 +2572,11 @@
    "date": "2026-11-20",
    "active": false,
    "played": false
+  },
+  {
+   "date": "2026-11-21",
+   "active": false,
+   "played": false
   }
  ],
  "carls-sdfc": [
@@ -2667,6 +2742,11 @@
   },
   {
    "date": "2026-11-20",
+   "active": false,
+   "played": false
+  },
+  {
+   "date": "2026-11-21",
    "active": false,
    "played": false
   }
@@ -2836,6 +2916,11 @@
    "date": "2026-11-20",
    "active": false,
    "played": false
+  },
+  {
+   "date": "2026-11-21",
+   "active": true,
+   "played": true
   }
  ],
  "carls-rams": [
@@ -3001,6 +3086,11 @@
   },
   {
    "date": "2026-11-20",
+   "active": false,
+   "played": false
+  },
+  {
+   "date": "2026-11-21",
    "active": false,
    "played": false
   }
@@ -3170,6 +3260,11 @@
    "date": "2026-11-20",
    "active": false,
    "played": false
+  },
+  {
+   "date": "2026-11-21",
+   "active": false,
+   "played": true
   }
  ],
  "mcd-kings": [
@@ -3337,6 +3432,11 @@
    "date": "2026-11-20",
    "active": false,
    "played": false
+  },
+  {
+   "date": "2026-11-21",
+   "active": false,
+   "played": true
   }
  ],
  "jitb-lakers": [
@@ -3504,6 +3604,11 @@
    "date": "2026-11-20",
    "active": true,
    "played": true
+  },
+  {
+   "date": "2026-11-21",
+   "active": false,
+   "played": false
   }
  ],
  "doordash-nba": [
@@ -3669,6 +3774,11 @@
   },
   {
    "date": "2026-11-20",
+   "active": true,
+   "played": true
+  },
+  {
+   "date": "2026-11-21",
    "active": true,
    "played": true
   }
