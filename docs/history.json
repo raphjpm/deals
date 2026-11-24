@@ -169,6 +169,11 @@
    "date": "2026-11-21",
    "active": false,
    "played": false
+  },
+  {
+   "date": "2026-11-22",
+   "active": false,
+   "played": false
   }
  ],
  "jitb-dodgers": [
@@ -339,6 +344,11 @@
   },
   {
    "date": "2026-11-21",
+   "active": false,
+   "played": false
+  },
+  {
+   "date": "2026-11-22",
    "active": false,
    "played": false
   }
@@ -513,6 +523,11 @@
    "date": "2026-11-21",
    "active": false,
    "played": false
+  },
+  {
+   "date": "2026-11-22",
+   "active": false,
+   "played": false
   }
  ],
  "habit": [
@@ -683,6 +698,11 @@
   },
   {
    "date": "2026-11-21",
+   "active": false,
+   "played": false
+  },
+  {
+   "date": "2026-11-22",
    "active": false,
    "played": false
   }
@@ -857,6 +877,11 @@
    "date": "2026-11-21",
    "active": false,
    "played": false
+  },
+  {
+   "date": "2026-11-22",
+   "active": false,
+   "played": false
   }
  ],
  "sunright": [
@@ -1027,6 +1052,11 @@
   },
   {
    "date": "2026-11-21",
+   "active": false,
+   "played": false
+  },
+  {
+   "date": "2026-11-22",
    "active": false,
    "played": false
   }
@@ -1201,6 +1231,11 @@
    "date": "2026-11-21",
    "active": false,
    "played": false
+  },
+  {
+   "date": "2026-11-22",
+   "active": false,
+   "played": false
   }
  ],
  "elportal": [
@@ -1371,6 +1406,11 @@
   },
   {
    "date": "2026-11-21",
+   "active": false,
+   "played": false
+  },
+  {
+   "date": "2026-11-22",
    "active": false,
    "played": false
   }
@@ -1545,6 +1585,11 @@
    "date": "2026-11-21",
    "active": false,
    "played": false
+  },
+  {
+   "date": "2026-11-22",
+   "active": false,
+   "played": false
   }
  ],
  "mcd-angels": [
@@ -1715,6 +1760,11 @@
   },
   {
    "date": "2026-11-21",
+   "active": false,
+   "played": false
+  },
+  {
+   "date": "2026-11-22",
    "active": false,
    "played": false
   }
@@ -1889,6 +1939,11 @@
    "date": "2026-11-21",
    "active": false,
    "played": false
+  },
+  {
+   "date": "2026-11-22",
+   "active": false,
+   "played": false
   }
  ],
  "firehouse": [
@@ -2059,6 +2114,11 @@
   },
   {
    "date": "2026-11-21",
+   "active": false,
+   "played": false
+  },
+  {
+   "date": "2026-11-22",
    "active": false,
    "played": false
   }
@@ -2233,6 +2293,11 @@
    "date": "2026-11-21",
    "active": false,
    "played": false
+  },
+  {
+   "date": "2026-11-22",
+   "active": false,
+   "played": false
   }
  ],
  "doordash-lafc": [
@@ -2403,6 +2468,11 @@
   },
   {
    "date": "2026-11-21",
+   "active": false,
+   "played": false
+  },
+  {
+   "date": "2026-11-22",
    "active": false,
    "played": false
   }
@@ -2577,6 +2647,11 @@
    "date": "2026-11-21",
    "active": false,
    "played": false
+  },
+  {
+   "date": "2026-11-22",
+   "active": false,
+   "played": false
   }
  ],
  "carls-sdfc": [
@@ -2747,6 +2822,11 @@
   },
   {
    "date": "2026-11-21",
+   "active": false,
+   "played": false
+  },
+  {
+   "date": "2026-11-22",
    "active": false,
    "played": false
   }
@@ -2921,6 +3001,11 @@
    "date": "2026-11-21",
    "active": true,
    "played": true
+  },
+  {
+   "date": "2026-11-22",
+   "active": false,
+   "played": false
   }
  ],
  "carls-rams": [
@@ -3091,6 +3176,11 @@
   },
   {
    "date": "2026-11-21",
+   "active": false,
+   "played": false
+  },
+  {
+   "date": "2026-11-22",
    "active": false,
    "played": false
   }
@@ -3265,6 +3355,11 @@
    "date": "2026-11-21",
    "active": false,
    "played": true
+  },
+  {
+   "date": "2026-11-22",
+   "active": false,
+   "played": false
   }
  ],
  "mcd-kings": [
@@ -3437,6 +3532,11 @@
    "date": "2026-11-21",
    "active": false,
    "played": true
+  },
+  {
+   "date": "2026-11-22",
+   "active": false,
+   "played": false
   }
  ],
  "jitb-lakers": [
@@ -3607,6 +3707,11 @@
   },
   {
    "date": "2026-11-21",
+   "active": false,
+   "played": false
+  },
+  {
+   "date": "2026-11-22",
    "active": false,
    "played": false
   }
@@ -3780,6 +3885,11 @@
   {
    "date": "2026-11-21",
    "active": true,
+   "played": true
+  },
+  {
+   "date": "2026-11-22",
+   "active": false,
    "played": true
   }
  ]
