@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-23T18:01-08:00",
- "gameDate": "2026-11-22",
+ "updated": "2026-11-24T15:47-08:00",
+ "gameDate": "2026-11-23",
  "deals": [
   {
    "id": "panda",
@@ -66,7 +66,7 @@
    "order": "https://order.habitburger.com/",
    "near": "The Habit Burger Grill",
    "url": "https://www.habitburger.com/dodgers/",
-   "daysLeft": -57,
+   "daysLeft": -58,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -187,7 +187,7 @@
    "follow": true,
    "ends": "2026-09-27",
    "url": "https://www.bajablasthomeruns.com",
-   "daysLeft": -57,
+   "daysLeft": -58,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -209,7 +209,7 @@
    "active": false,
    "reason": "No extra-inning games last weekend",
    "lastActive": "2026-09-29",
-   "daysSinceActive": 54,
+   "daysSinceActive": 55,
    "recentCount": 0
   },
   {
@@ -224,7 +224,7 @@
    "near": "Ono Hawaiian BBQ",
    "url": "https://onohawaiianbbq.com/lafc/",
    "active": false,
-   "reason": "No match yesterday",
+   "reason": "at St. Louis CITY SC, 2-3",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -240,7 +240,7 @@
    "order": "https://www.doordash.com/",
    "url": "https://www.instagram.com/stories/lafc/",
    "active": false,
-   "reason": "No match yesterday",
+   "reason": "at St. Louis CITY SC, 2-3",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -259,7 +259,7 @@
    "active": false,
    "reason": "No match in the last 2 days",
    "lastActive": "2026-10-31",
-   "daysSinceActive": 22,
+   "daysSinceActive": 23,
    "recentCount": 1
   },
   {
@@ -293,7 +293,7 @@
    "active": false,
    "reason": "No match yesterday",
    "lastActive": "2026-11-21",
-   "daysSinceActive": 1,
+   "daysSinceActive": 2,
    "recentCount": 3
   },
   {
@@ -310,7 +310,7 @@
    "active": false,
    "reason": "No game yesterday",
    "lastActive": "2026-11-15",
-   "daysSinceActive": 7,
+   "daysSinceActive": 8,
    "recentCount": 1
   },
   {
@@ -326,9 +326,9 @@
    "near": "McDonald's",
    "url": "https://www.nhl.com/ducks/fans/mcdonalds-ducks-win",
    "active": false,
-   "reason": "No game yesterday",
+   "reason": "at SEA, 2-3",
    "lastActive": "2026-11-15",
-   "daysSinceActive": 7,
+   "daysSinceActive": 8,
    "recentCount": 1
   },
   {
@@ -344,7 +344,7 @@
    "near": "McDonald's",
    "url": "https://www.mcdonalds.com/us/en-us.html",
    "active": false,
-   "reason": "No game yesterday",
+   "reason": "at MTL, 2-1: no goal in the final minute of the 2nd",
    "lastActive": null,
    "daysSinceActive": null,
    "recentCount": 0
@@ -360,11 +360,11 @@
    "order": "https://www.jackinthebox.com/",
    "near": "Jack in the Box",
    "url": "https://www.jackinthebox.com/location",
-   "active": false,
-   "reason": "No game yesterday",
-   "lastActive": "2026-11-20",
-   "daysSinceActive": 2,
-   "recentCount": 4
+   "active": true,
+   "reason": "vs Utah Jazz, 109-94",
+   "lastActive": "2026-11-23",
+   "daysSinceActive": 0,
+   "recentCount": 5
   },
   {
    "id": "doordash-nba",
@@ -377,61 +377,49 @@
    "order": "https://www.doordash.com/",
    "url": "https://www.doordash.com/",
    "active": false,
-   "reason": "Top scorer: Jamal Murray, 45 pts",
+   "reason": "Top scorer: Shai Gilgeous-Alexander, 38 pts",
    "lastActive": "2026-11-21",
-   "daysSinceActive": 1,
+   "daysSinceActive": 2,
    "recentCount": 3
   }
  ],
  "errors": [],
  "upcoming": [
   {
-   "id": "jitb-lakers",
-   "vendor": "Jack in the Box",
-   "team": "Lakers",
-   "offer": "2 free tacos with any drink",
-   "when": "Lakers win",
-   "gameDate": "2026-11-23",
-   "dealDate": "2026-11-24",
-   "matchup": "Lakers vs Utah Jazz",
-   "prob": 0.5,
-   "basis": "Blend of league rates and this tracker's last 9 games"
-  },
-  {
-   "id": "doordash-lafc",
-   "vendor": "DoorDash",
-   "team": "LAFC",
-   "offer": "$10 off $20+",
-   "when": "LAFC win",
-   "gameDate": "2026-11-23",
-   "dealDate": "2026-11-24",
-   "matchup": "LAFC at St. Louis CITY SC",
-   "prob": 0.48,
-   "basis": "Estimate from typical league rates"
-  },
-  {
    "id": "doordash-nba",
    "vendor": "DoorDash",
    "team": "NBA",
    "offer": "50% off one order, up to $10 (DashPass)",
    "when": "Any NBA player scores 50+",
-   "gameDate": "2026-11-23",
-   "dealDate": "2026-11-24",
+   "gameDate": "2026-11-24",
+   "dealDate": "2026-11-25",
    "matchup": "Any NBA game",
    "prob": 0.09,
-   "basis": "Blend of league rates and this tracker's last 27 games"
+   "basis": "Blend of league rates and this tracker's last 28 games"
   },
   {
-   "id": "mcd-kings",
-   "vendor": "McDonald's",
-   "team": "Kings",
-   "offer": "Free McFlurry with $2 purchase",
-   "when": "Kings goal in the last minute of the 2nd",
-   "gameDate": "2026-11-23",
-   "dealDate": "2026-11-24",
-   "matchup": "Kings at MTL",
-   "prob": 0.08,
+   "id": "carls-rams",
+   "vendor": "Carl's Jr",
+   "team": "Rams",
+   "offer": "Free Famous Star with Cheese with large drink",
+   "when": "Rams get an interception",
+   "gameDate": "2026-11-25",
+   "dealDate": "2026-11-26",
+   "matchup": "Rams vs Green Bay Packers",
+   "prob": 0.55,
    "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "mcd-ducks",
+   "vendor": "McDonald's",
+   "team": "Ducks",
+   "offer": "$2 Sausage, Egg & Cheese McGriddles",
+   "when": "Ducks home win",
+   "gameDate": "2026-11-25",
+   "dealDate": "2026-11-26",
+   "matchup": "Ducks vs SJS",
+   "prob": 0.17,
+   "basis": "Blend of league rates and this tracker's last 20 games"
   }
  ]
 }
