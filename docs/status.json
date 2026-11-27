@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-26T15:31-08:00",
- "gameDate": "2026-11-25",
+ "updated": "2026-11-27T15:15-08:00",
+ "gameDate": "2026-11-26",
  "deals": [
   {
    "id": "panda",
@@ -66,7 +66,7 @@
    "order": "https://order.habitburger.com/",
    "near": "The Habit Burger Grill",
    "url": "https://www.habitburger.com/dodgers/",
-   "daysLeft": -60,
+   "daysLeft": -61,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -187,7 +187,7 @@
    "follow": true,
    "ends": "2026-09-27",
    "url": "https://www.bajablasthomeruns.com",
-   "daysLeft": -60,
+   "daysLeft": -61,
    "endingSoon": false,
    "active": false,
    "reason": "Promo ended for the season",
@@ -209,7 +209,7 @@
    "active": false,
    "reason": "Only redeemable Monday to Wednesday",
    "lastActive": "2026-09-29",
-   "daysSinceActive": 57,
+   "daysSinceActive": 58,
    "recentCount": 0
   },
   {
@@ -259,7 +259,7 @@
    "active": false,
    "reason": "No match in the last 2 days",
    "lastActive": "2026-10-31",
-   "daysSinceActive": 25,
+   "daysSinceActive": 26,
    "recentCount": 1
   },
   {
@@ -293,7 +293,7 @@
    "active": false,
    "reason": "No match yesterday",
    "lastActive": "2026-11-21",
-   "daysSinceActive": 4,
+   "daysSinceActive": 5,
    "recentCount": 2
   },
   {
@@ -307,10 +307,10 @@
    "order": "https://order.carlsjr.com/",
    "near": "Carl's Jr",
    "url": "https://www.therams.com/game-day/promotions",
-   "active": true,
-   "reason": "vs Green Bay Packers, 26-13: 2 interceptions",
+   "active": false,
+   "reason": "No game yesterday",
    "lastActive": "2026-11-25",
-   "daysSinceActive": 0,
+   "daysSinceActive": 1,
    "recentCount": 2
   },
   {
@@ -325,10 +325,10 @@
    "orderLabel": "Open app",
    "near": "McDonald's",
    "url": "https://www.nhl.com/ducks/fans/mcdonalds-ducks-win",
-   "active": true,
-   "reason": "vs SJS, 7-0",
+   "active": false,
+   "reason": "No game yesterday",
    "lastActive": "2026-11-25",
-   "daysSinceActive": 0,
+   "daysSinceActive": 1,
    "recentCount": 2
   },
   {
@@ -363,7 +363,7 @@
    "active": false,
    "reason": "No game yesterday",
    "lastActive": "2026-11-23",
-   "daysSinceActive": 2,
+   "daysSinceActive": 3,
    "recentCount": 5
   },
   {
@@ -377,9 +377,9 @@
    "order": "https://www.doordash.com/",
    "url": "https://www.doordash.com/",
    "active": false,
-   "reason": "Top scorer: Victor Wembanyama, 44 pts",
+   "reason": "No NBA games yesterday",
    "lastActive": "2026-11-21",
-   "daysSinceActive": 4,
+   "daysSinceActive": 5,
    "recentCount": 3
   }
  ],
@@ -431,6 +431,54 @@
    "dealDate": "2026-11-28",
    "matchup": "Kings at ANA",
    "prob": 0.08,
+   "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "carls-timbers",
+   "vendor": "Carl's Jr",
+   "team": "Timbers",
+   "offer": "Free signature item, no purchase needed",
+   "when": "Timbers played",
+   "gameDate": "2026-11-28",
+   "dealDate": "2026-11-29",
+   "matchup": "Timbers vs FC Dallas",
+   "prob": 1.0,
+   "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "doordash-lafc",
+   "vendor": "DoorDash",
+   "team": "LAFC",
+   "offer": "$10 off $20+",
+   "when": "LAFC win",
+   "gameDate": "2026-11-28",
+   "dealDate": "2026-11-29",
+   "matchup": "LAFC vs St. Louis CITY SC",
+   "prob": 0.48,
+   "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "ono",
+   "vendor": "Ono Hawaiian BBQ",
+   "team": "LAFC",
+   "offer": "$5.99 Chicken Plate Lunch",
+   "when": "LAFC scores first in the first half at home",
+   "gameDate": "2026-11-28",
+   "dealDate": "2026-11-29",
+   "matchup": "LAFC vs St. Louis CITY SC",
+   "prob": 0.3,
+   "basis": "Estimate from typical league rates"
+  },
+  {
+   "id": "firehouse",
+   "vendor": "Firehouse Subs",
+   "team": "MLB",
+   "offer": "Buy one medium sub, get one free (Mon to Wed)",
+   "when": "Any MLB game Fri to Sun goes to extras",
+   "gameDate": "2026-11-27",
+   "dealDate": "2026-11-30",
+   "matchup": "Any MLB game this weekend",
+   "prob": 0.55,
    "basis": "Estimate from typical league rates"
   }
  ]
